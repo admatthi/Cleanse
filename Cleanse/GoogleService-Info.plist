@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>688628044435-un62047qvca8ng0157gfo0lv2ebru6ph.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.688628044435-un62047qvca8ng0157gfo0lv2ebru6ph</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCvVy3I54T8pR7BvQb16VBeWkjqWToiNTE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>688628044435</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.aatech.Cleanse</string>
+	<key>PROJECT_ID</key>
+	<string>minute-meals-71da3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>minute-meals-71da3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:688628044435:ios:f4390ae501571955</string>
+	<key>DATABASE_URL</key>
+	<string>https://minute-meals-71da3.firebaseio.com</string>
+</dict>
+</plist>
