@@ -17,6 +17,7 @@ import SwiftyStoreKit
 import StoreKit
 import FBSDKCoreKit
 import UserNotifications
+import UXCam
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        FBSDKAppEvents.activateApp()
+        
+        
+        UXCam.start(withKey: "8921dd89a4b98a3")
+        
+        SwiftyStoreKit.completeTransactions(atomically: true) { products in
+            
+            for product in products {
+                
+                if product.transaction.transactionState == .purchased || product.transaction.transactionState == .restored {
+                    
+                    if product.needsFinishTransaction {
+                        // Deliver content from server, then:
+                        SwiftyStoreKit.finishTransaction(product.transaction)
+                    }
+                    print("purchased: \(product)")
+                }
+            }
+        }
+
         return true
     }
 

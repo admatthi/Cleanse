@@ -31,19 +31,58 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             counter = 1
             queryforfooddata()
             
-//            self.performSegue(withIdentifier: "HomeToCreate", sender: self)
+            DispatchQueue.main.async {
+                
+                self.performSegue(withIdentifier: "HomeToCreate", sender: self)
+
+            }
+            
             
         } else {
             
             counter = 1
             queryforfooddata()
             uid = (Auth.auth().currentUser?.uid)!
+//            let date = Date()
+//            let calendar = Calendar.current
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "MM-dd-yy"
+//            var todaysdate =  dateFormatter.string(from: date)
+//
+//            var dow = getDayOfWeek(todaysdate)
+//
+//            let weekday = Calendar.current.component(.weekday, from: Date())
+//
+//            var week =  dateFormatter.string(from: date)
+
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "EEEE"
+            let dayInWeek = formatter.string(from: date)
             
+            dayofweek.text = dayInWeek
             
         }
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var dayofweek: UILabel!
+    @IBAction func tapRefresh(_ sender: Any) {
+        
+        counter += 1
+        
+        if counter >= 7 {
+            
+            counter = 0
+            
+            queryforfooddata()
+
+        } else {
+            
+            queryforfooddata()
+
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -171,9 +210,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Meals", for: indexPath) as! MealsTableViewCell
         
+        cell.foodimage.layer.masksToBounds = false
+        cell.foodimage.layer.cornerRadius = cell.foodimage.frame.height/2
+        cell.foodimage.clipsToBounds = true
+        
         if foodimages.count > indexPath.row {
            
-            cell.foodimage.image = foodimages[indexPath.row]
+//            cell.foodimage.image = foodimages[indexPath.row]
             
         }
 
@@ -181,7 +224,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             cell.nutrient.text = bnutrient
             cell.food.text = bfood
-            cell.category.text = breakfast
+            cell.category.text = "Breakfast"
+            cell.foodimage.image = UIImage(named: "\(bfood)")
             
         } else {
             
@@ -189,7 +233,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 cell.nutrient.text = bsnutrient
                 cell.food.text = bsfood
-                cell.category.text = bsnack
+                cell.category.text = "Breakfast Snack"
+                cell.foodimage.image = UIImage(named: "\(bsfood)")
                 
             } else {
                 
@@ -197,7 +242,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     
                     cell.nutrient.text = lnutrient
                     cell.food.text = lfood
-                    cell.category.text = lunch
+                    cell.category.text = "Lunch"
+                    cell.foodimage.image = UIImage(named: "\(lfood)")
                     
                 } else {
                     
@@ -205,7 +251,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         
                         cell.nutrient.text = lsnutrient
                         cell.food.text = lsfood
-                        cell.category.text = lsnack
+                        cell.category.text = "Lunch Snack"
+                        cell.foodimage.image = UIImage(named: "\(lsfood)")
                         
                     } else {
                         
@@ -213,7 +260,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                             
                             cell.nutrient.text = dnutrient
                             cell.food.text = dfood
-                            cell.category.text = dinner
+                            cell.category.text = "Dinner"
+                            cell.foodimage.image = UIImage(named: "\(dfood)")
                             
                         } else {
                             
@@ -259,3 +307,12 @@ var dnutrient = String()
 var dfood = String()
 
 var foodimages = [UIImage]()
+
+func getDayOfWeek(_ today:String) -> Int? {
+    let formatter  = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+    guard let todayDate = formatter.date(from: today) else { return nil }
+    let myCalendar = Calendar(identifier: .gregorian)
+    let weekDay = myCalendar.component(.weekday, from: todayDate)
+    return weekDay
+}

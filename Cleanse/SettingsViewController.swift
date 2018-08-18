@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseCore
+import FirebaseStorage
+import FirebaseDatabase
+import FirebaseAuth
 
 class SettingsViewController: UIViewController {
 
     @IBAction func tapBilling(_ sender: Any) {
         
-        if let url = NSURL(string: "https://www.snippetsla.com/billing-terms.html"
+        if let url = NSURL(string: "https://mycleanseapp.weebly.com/billing-terms.html"
             ) {
             UIApplication.shared.openURL(url as URL)
         }
     }
     @IBAction func tapAbout(_ sender: Any) {
         
-        if let url = NSURL(string: "https://www.snippetsla.com"
+        if let url = NSURL(string: "https://mycleanseapp.weebly.com/"
             ) {
             UIApplication.shared.openURL(url as URL)
         }
@@ -27,9 +32,9 @@ class SettingsViewController: UIViewController {
     
     @IBAction func tapLogout(_ sender: Any) {
         
-//        try! Auth.auth().signOut()
+        try! Auth.auth().signOut()
         
-        self.performSegue(withIdentifier: "SettingsToLogin", sender: self)
+        self.performSegue(withIdentifier: "Logout", sender: self)
     }
     @IBAction func tapSubscription(_ sender: Any) {
         
@@ -40,7 +45,7 @@ class SettingsViewController: UIViewController {
     }
     @IBAction func tapTerms(_ sender: Any) {
         
-        if let url = NSURL(string: "https://www.snippetsla.com/terms.html"
+        if let url = NSURL(string: "https://mycleanseapp.weebly.com/terms.html"
             ) {
             UIApplication.shared.openURL(url as URL)
         }
@@ -48,7 +53,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func tapPrivacy(_ sender: Any) {
         
-        if let url = NSURL(string: "https://www.snippetsla.com/privacy-policy.html"
+        if let url = NSURL(string: "https://mycleanseapp.weebly.com/privacy-policy.html"
             ) {
             UIApplication.shared.openURL(url as URL)
         }

@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class FViewController: UIViewController {
 
+    @IBAction func tapStarted(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        
+    }
     @IBOutlet weak var slider1: UISlider!
     @IBAction func tapSlider(_ sender: Any) {
         
@@ -20,6 +27,7 @@ class FViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        FBSDKAppEvents.logEvent("Screen 7")
         // Do any additional setup after loading the view.
     }
 

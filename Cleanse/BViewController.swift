@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class BViewController: UIViewController {
 
@@ -20,7 +21,11 @@ class BViewController: UIViewController {
     @IBOutlet weak var tapbutton3: UIButton!
     @IBOutlet weak var tapbutton4: UIButton!
     
+    
     @IBAction func tapB1(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         
 //        if b1pressed {
 //
@@ -37,6 +42,9 @@ class BViewController: UIViewController {
     }
     @IBAction func tapB2(_ sender: Any) {
         
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        
 //        if b2pressed {
 //
 //            tapbutton2.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
@@ -52,6 +60,9 @@ class BViewController: UIViewController {
     }
     @IBAction func tapB3(_ sender: Any) {
         
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        
 //        if b3pressed {
 //            
 //            tapbutton3.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
@@ -66,6 +77,9 @@ class BViewController: UIViewController {
 //        }
     }
     @IBAction func tapB4(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         
         if b4pressed {
             
@@ -87,6 +101,8 @@ class BViewController: UIViewController {
         b2pressed = false
         b3pressed = false
         b4pressed = false
+        
+        FBSDKAppEvents.logEvent("Screen 2")
         // Do any additional setup after loading the view.
     }
 

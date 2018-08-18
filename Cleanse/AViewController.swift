@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 var ages = [String]()
 
@@ -16,6 +17,12 @@ class AViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var agelabel: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
     
+    @IBAction func tapGetStarted(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        
+    }
     func addagestopickerView() {
         
         ages.append("18")
@@ -63,6 +70,8 @@ class AViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         addagestopickerView()
         
         button1.alpha = 0
+        FBSDKAppEvents.logEvent("Screen 1")
+
         // Do any additional setup after loading the view.
     }
 

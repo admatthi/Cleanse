@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class CViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class CViewController: UIViewController {
     
     @IBAction func tapB1(_ sender: Any) {
         
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
 //        if b1pressed {
 //
 //            tapbutton1.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
@@ -36,6 +39,9 @@ class CViewController: UIViewController {
 //        }
     }
     @IBAction func tapB2(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         
 //        if b2pressed {
 //
@@ -52,6 +58,9 @@ class CViewController: UIViewController {
     }
     @IBAction func tapB3(_ sender: Any) {
         
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        
 //        if b3pressed {
 //            
 //            tapbutton3.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
@@ -66,6 +75,9 @@ class CViewController: UIViewController {
 //        }
     }
     @IBAction func tapB4(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         
         if b4pressed {
             
@@ -87,6 +99,8 @@ class CViewController: UIViewController {
         b2pressed = false
         b3pressed = false
         b4pressed = false
+        
+        FBSDKAppEvents.logEvent("Screen 3")
         // Do any additional setup after loading the view.
     }
 

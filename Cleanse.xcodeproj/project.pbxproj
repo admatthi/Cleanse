@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		17C25A4F7DD40DEED8AE281F /* Pods_Cleanse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626D84ADEA4B14D0498DBFF6 /* Pods_Cleanse.framework */; };
 		77E805DD249E4D8E75E12408 /* Pods_CleanseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8638814EF45853CB3398D2E3 /* Pods_CleanseTests.framework */; };
+		9D3E1F13211B3C7C00CA9E57 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3E1F12211B3C7C00CA9E57 /* StoreKit.framework */; };
 		9D43C5E4211A645A00659451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C5E3211A645A00659451 /* AppDelegate.swift */; };
 		9D43C5E6211A645A00659451 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C5E5211A645A00659451 /* ViewController.swift */; };
 		9D43C5E9211A645A00659451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D43C5E7211A645A00659451 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		626D84ADEA4B14D0498DBFF6 /* Pods_Cleanse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cleanse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8638814EF45853CB3398D2E3 /* Pods_CleanseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		994ACEBC28352862D6DBA3A6 /* Pods-Cleanse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleanse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cleanse/Pods-Cleanse.debug.xcconfig"; sourceTree = "<group>"; };
+		9D3E1F12211B3C7C00CA9E57 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9D43C5E0211A645A00659451 /* Cleanse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cleanse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D43C5E3211A645A00659451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D43C5E5211A645A00659451 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		9D43C645211B2B0800659451 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9D43C647211B2B1400659451 /* BillingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingViewController.swift; sourceTree = "<group>"; };
 		9D43C649211B339F00659451 /* MealsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewCell.swift; sourceTree = "<group>"; };
+		9D45E72221221EA800A26195 /* Cleanse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cleanse.entitlements; sourceTree = "<group>"; };
 		A868265761F55598D3AEA878 /* Pods-CleanseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanseTests/Pods-CleanseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8487AA3D090BB663F44EE56 /* Pods-CleanseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanseUITests/Pods-CleanseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C20D30A4019BCDF22A6D5FBD /* Pods_CleanseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17C25A4F7DD40DEED8AE281F /* Pods_Cleanse.framework in Frameworks */,
+				9D3E1F13211B3C7C00CA9E57 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +176,7 @@
 		9D43C5E2211A645A00659451 /* Cleanse */ = {
 			isa = PBXGroup;
 			children = (
+				9D45E72221221EA800A26195 /* Cleanse.entitlements */,
 				9D43C5E3211A645A00659451 /* AppDelegate.swift */,
 				9D43C5E5211A645A00659451 /* ViewController.swift */,
 				9D43C5E7211A645A00659451 /* Main.storyboard */,
@@ -238,6 +243,7 @@
 		F2F087F3B0F154E81E4B6DBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D3E1F12211B3C7C00CA9E57 /* StoreKit.framework */,
 				626D84ADEA4B14D0498DBFF6 /* Pods_Cleanse.framework */,
 				8638814EF45853CB3398D2E3 /* Pods_CleanseTests.framework */,
 				C20D30A4019BCDF22A6D5FBD /* Pods_CleanseUITests.framework */,
@@ -317,6 +323,14 @@
 				TargetAttributes = {
 					9D43C5DF211A645A00659451 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					9D43C5F3211A645D00659451 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -679,10 +693,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 994ACEBC28352862D6DBA3A6 /* Pods-Cleanse.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = Cleanse/Cleanse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 797Q3HJ5U5;
 				INFOPLIST_FILE = Cleanse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -698,10 +714,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C51454D9155FA65E0E3D1678 /* Pods-Cleanse.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = Cleanse/Cleanse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 797Q3HJ5U5;
 				INFOPLIST_FILE = Cleanse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

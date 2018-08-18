@@ -26,8 +26,6 @@ var ref: DatabaseReference?
 
 enum RegisteredPurchase: String {
     
-    case sevendaytrial = "7DayTrial"
-    
     case threedaytrial = "3DayTrial"
     
     case OneTimePurchase = "OneTimePurchase"
@@ -67,7 +65,7 @@ class NetworkActivityIndicatorManager: NSObject {
     }
 }
 
-var sharedSecret = "20f815c7b6b24304a5c3d124edf09bcc"
+var sharedSecret = "2f30b9e700c54fc3a6d058ebdfafec2e"
 
 var price = Double()
 
@@ -78,7 +76,6 @@ class PurchaseViewController: UIViewController {
     let bundleID = "com.aatech.Cleanse"
     
     var threedaytrial = RegisteredPurchase.threedaytrial
-    var sevendaytrial = RegisteredPurchase.sevendaytrial
     var onetimepurchase = RegisteredPurchase.OneTimePurchase
     var sevendayfreetrial = RegisteredPurchase.SevenDayFreeTrial
     let validator = AppleReceiptValidator(service: .production)
@@ -94,7 +91,7 @@ class PurchaseViewController: UIViewController {
     }
     @IBAction func tapTerms(_ sender: Any) {
         
-        if let url = NSURL(string: "https://www.snippetsla.com/privacy-policy.html"
+        if let url = NSURL(string: "https://mycleanseapp.weebly.com/privacy-policy.html"
             ) {
             UIApplication.shared.openURL(url as URL)
         }
@@ -165,7 +162,7 @@ class PurchaseViewController: UIViewController {
                                                 
                                                 DispatchQueue.main.async {
                                                     
-                                                    self.performSegue(withIdentifier: "PurchaseToLoging", sender: self)
+                                                    self.performSegue(withIdentifier: "PurchaseToLogin", sender: self)
                                                     
                                                 }
                                                 
@@ -174,7 +171,7 @@ class PurchaseViewController: UIViewController {
                                                 
                                                 DispatchQueue.main.async {
                                                     
-                                                    self.performSegue(withIdentifier: "PurchaseToLoging", sender: self)
+                                                    self.performSegue(withIdentifier: "PurchaseToLogin", sender: self)
                                                     
                                                 }
                                                 
@@ -184,7 +181,7 @@ class PurchaseViewController: UIViewController {
                                                 
                                                 DispatchQueue.main.async {
                                                     
-                                                    self.performSegue(withIdentifier: "PurchaseToLoging", sender: self)
+                                                    self.performSegue(withIdentifier: "PurchaseToLogin", sender: self)
                                                     
                                                 }
                                                 
@@ -194,7 +191,7 @@ class PurchaseViewController: UIViewController {
                                                 
                                                 DispatchQueue.main.async {
                                                     
-                                                    self.performSegue(withIdentifier: "PurchaseToLoging", sender: self)
+                                                    self.performSegue(withIdentifier: "PurchaseToLogin", sender: self)
                                                     
                                                 }
                                                 
@@ -215,7 +212,7 @@ class PurchaseViewController: UIViewController {
                                             
                                             DispatchQueue.main.async {
                                                 
-                                                self.performSegue(withIdentifier: "PurchaseToLoging", sender: self)
+                                                self.performSegue(withIdentifier: "PurchaseToLogin", sender: self)
                                                 
                                             }
                                             
@@ -226,7 +223,7 @@ class PurchaseViewController: UIViewController {
                                             
                                             DispatchQueue.main.async {
                                                 
-                                                self.performSegue(withIdentifier: "PurchaseToLoging", sender: self)
+                                                self.performSegue(withIdentifier: "PurchaseToLogin", sender: self)
                                                 
                                             }
                                             
@@ -237,8 +234,8 @@ class PurchaseViewController: UIViewController {
         
     }
     
-    @IBOutlet weak var tapterms: UIButton!
     
+    @IBOutlet weak var tapterms: UIButton!
     func restorePurchases() {
         
         var functioncounter = 0
@@ -327,7 +324,7 @@ class PurchaseViewController: UIViewController {
                 
                 let productID = self.bundleID + "." + product.rawValue
                 
-                if product == .sevendaytrial || product == .threedaytrial {
+                if product == .SevenDayFreeTrial || product == .threedaytrial {
                     let purchaseResult = SwiftyStoreKit.verifySubscription(type: .autoRenewable, productId: productID, inReceipt: receipt, validUntil: Date())
                     self.showAlert(alert: self.alertForVerifySubscription(result: purchaseResult))
                     
@@ -365,8 +362,8 @@ class PurchaseViewController: UIViewController {
         let buttonTitleStr = NSMutableAttributedString(string:"By continuing, you accept our Terms of Use & Privacy Policy", attributes:attrs)
         attributedString.append(buttonTitleStr)
         tapterms.setAttributedTitle(attributedString, for: .normal)
-        tapterms.setTitleColor(.white, for: .normal)
-        
+        tapterms.setTitleColor(.black, for: .normal)
+        tapterms.alpha = 1
         //        label.text = "By continuing you accept our Privacy Policy, Billing Terms, & Terms of Use"
         
         //        label.underline()
@@ -401,7 +398,7 @@ class PurchaseViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     
-                    self.performSegue(withIdentifier: "PurchaseToHome8", sender: self)
+                    self.performSegue(withIdentifier: "PurchaseToLogin", sender: self)
                     
                 }
             }
@@ -558,7 +555,7 @@ class PurchaseViewController: UIViewController {
     }
     
     var attrs = [
-        NSAttributedStringKey.foregroundColor : UIColor.white,
+        NSAttributedStringKey.foregroundColor : UIColor.gray,
         NSAttributedStringKey.underlineStyle : 1] as [NSAttributedStringKey : Any]
     
     var attributedString = NSMutableAttributedString(string:"")
