@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		17C25A4F7DD40DEED8AE281F /* Pods_Cleanse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626D84ADEA4B14D0498DBFF6 /* Pods_Cleanse.framework */; };
 		77E805DD249E4D8E75E12408 /* Pods_CleanseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8638814EF45853CB3398D2E3 /* Pods_CleanseTests.framework */; };
+		9D2B8C272128B7D300188DC5 /* ApprovedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */; };
+		9D2B8C292128B7E300188DC5 /* ApprovedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */; };
 		9D3E1F13211B3C7C00CA9E57 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3E1F12211B3C7C00CA9E57 /* StoreKit.framework */; };
 		9D43C5E4211A645A00659451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C5E3211A645A00659451 /* AppDelegate.swift */; };
 		9D43C5E6211A645A00659451 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C5E5211A645A00659451 /* ViewController.swift */; };
@@ -77,6 +79,8 @@
 		626D84ADEA4B14D0498DBFF6 /* Pods_Cleanse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cleanse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8638814EF45853CB3398D2E3 /* Pods_CleanseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		994ACEBC28352862D6DBA3A6 /* Pods-Cleanse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleanse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cleanse/Pods-Cleanse.debug.xcconfig"; sourceTree = "<group>"; };
+		9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovedTableViewCell.swift; sourceTree = "<group>"; };
+		9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovedViewController.swift; sourceTree = "<group>"; };
 		9D3E1F12211B3C7C00CA9E57 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9D43C5E0211A645A00659451 /* Cleanse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cleanse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D43C5E3211A645A00659451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				9D43C641211A799500659451 /* LoginViewController.swift */,
 				9D43C63B211A78FD00659451 /* PurchaseViewController.swift */,
 				9D43C63D211A790600659451 /* HomeViewController.swift */,
+				9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */,
+				9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */,
 				9D43C649211B339F00659451 /* MealsTableViewCell.swift */,
 				9D43C645211B2B0800659451 /* SettingsViewController.swift */,
 				9D43C647211B2B1400659451 /* BillingViewController.swift */,
@@ -506,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D43C5E6211A645A00659451 /* ViewController.swift in Sources */,
+				9D2B8C292128B7E300188DC5 /* ApprovedViewController.swift in Sources */,
 				9D43C63A211A78F100659451 /* GViewController.swift in Sources */,
 				9D43C634211A78D500659451 /* DViewController.swift in Sources */,
 				9D43C630211A78B300659451 /* BViewController.swift in Sources */,
@@ -521,6 +528,7 @@
 				9D43C5E4211A645A00659451 /* AppDelegate.swift in Sources */,
 				9D43C642211A799500659451 /* LoginViewController.swift in Sources */,
 				9D43C636211A78E000659451 /* EViewController.swift in Sources */,
+				9D2B8C272128B7D300188DC5 /* ApprovedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
