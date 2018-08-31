@@ -18,12 +18,22 @@ import StoreKit
 import FBSDKCoreKit
 import UserNotifications
 import UXCam
+import Purchases
+
+protocol SnippetsPurchasesDelegate: AnyObject {
+    
+    func purchaseCompleted(product: String)
+    
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var purchases = RCPurchases(apiKey: "GLZWwnZAKXfcMFaSInneapaeokDPPMic")
+    
+    weak var purchasesdelegate : SnippetsPurchasesDelegate?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -34,6 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         UXCam.start(withKey: "8921dd89a4b98a3")
+        
+        purchases?.delegate = self
+
         
         SwiftyStoreKit.completeTransactions(atomically: true) { products in
             
@@ -51,6 +64,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         return true
+    }
+    
+    func letsgo() {
+        
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Login") as UIViewController
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = initialViewControlleripad
+        self.window?.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -78,3 +100,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: RCPurchasesDelegate {
+    func purchases(_ purchases: RCPurchases, completedTransaction transaction: SKPaymentTransaction, withUpdatedInfo purchaserInfo: RCPurchaserInfo) {
+        
+        self.purchasesdelegate?.purchaseCompleted(product: transaction.payment.productIdentifier)
+        
+        print("purchased")
+        tryingtopurchase  = true
+        letsgo()
+        
+    }
+    
+    func purchases(_ purchases: RCPurchases, receivedUpdatedPurchaserInfo purchaserInfo: RCPurchaserInfo) {
+        //        handlePurchaserInfo(purchaserInfo)
+        
+        print("shit")
+        
+    }
+    
+    func purchases(_ purchases: RCPurchases, failedToUpdatePurchaserInfoWithError error: Error) {
+        print(error)
+        
+        tryingtopurchase = false
+    }
+    
+    func purchases(_ purchases: RCPurchases, failedTransaction transaction: SKPaymentTransaction, withReason failureReason: Error) {
+        print(failureReason)
+        
+        tryingtopurchase = false
+    }
+    
+    func purchases(_ purchases: RCPurchases, restoredTransactionsWith purchaserInfo: RCPurchaserInfo) {
+        //        handlePurchaserInfo(purchaserInfo)
+        
+        print("restored")
+        tryingtopurchase  = true
+        
+    }
+    
+    func purchases(_ purchases: RCPurchases, failedToRestoreTransactionsWithError error: Error) {
+        print(error)
+    }
+}

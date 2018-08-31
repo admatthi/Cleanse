@@ -16,6 +16,30 @@ class BViewController: UIViewController {
     var b3pressed = Bool()
     var b4pressed = Bool()
     
+    @IBAction func tapContinue(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        
+    }
+    @IBOutlet weak var mainimage: UIImageView!
+    @IBAction func tapThighs(_ sender: Any) {
+        
+        mainimage.image = UIImage(named: "Legs")
+    }
+    @IBOutlet weak var tapthighs: UIButton!
+    @IBAction func taparms(_ sender: Any) {
+        
+        mainimage.image = UIImage(named: "Arms")
+    }
+    @IBAction func tapchest(_ sender: Any) {
+        
+        mainimage.image = UIImage(named: "Chest")
+    }
+    @IBAction func tapfat(_ sender: Any) {
+        
+        mainimage.image = UIImage(named: "Belly")
+    }
     @IBOutlet weak var tapbutton1: UIButton!
     @IBOutlet weak var tapbutton2: UIButton!
     @IBOutlet weak var tapbutton3: UIButton!

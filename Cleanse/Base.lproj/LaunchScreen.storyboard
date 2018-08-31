@@ -8,11 +8,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Dosis-SemiBold.otf">
-            <string>Dosis-SemiBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -28,17 +23,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME TO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws0-ez-cId">
-                                <rect key="frame" x="42" y="286.5" width="291" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="ZfN-P7-pZZ"/>
-                                    <constraint firstAttribute="width" constant="291" id="lI1-KN-M3a"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0w-m7-F3a">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.4154965835285836" green="0.45490437858504867" blue="0.68163071065989844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CleanseLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ahU-rE-zF8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CleanseLogo-1" translatesAutoresizingMaskIntoConstraints="NO" id="ahU-rE-zF8">
                                 <rect key="frame" x="67" y="314" width="240" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="NHO-cb-lhC"/>
@@ -49,12 +41,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="H3l-Ht-OgO" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="6YM-AN-sz8"/>
+                            <constraint firstItem="U0w-m7-F3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Klw-ml-1Du"/>
+                            <constraint firstItem="U0w-m7-F3a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pqm-42-CXn"/>
                             <constraint firstItem="ahU-rE-zF8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-3.5" id="R1u-nh-bfC"/>
                             <constraint firstItem="ahU-rE-zF8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Y1h-XT-o0M"/>
-                            <constraint firstItem="ahU-rE-zF8" firstAttribute="top" secondItem="Ws0-ez-cId" secondAttribute="bottom" constant="5.5" id="aaP-R0-De2"/>
                             <constraint firstItem="H3l-Ht-OgO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cGM-5w-7Ax"/>
-                            <constraint firstItem="Ws0-ez-cId" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kjj-pt-dcN"/>
+                            <constraint firstItem="U0w-m7-F3a" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="d9b-Db-zfP"/>
                             <constraint firstItem="H3l-Ht-OgO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nGX-oX-J5K"/>
+                            <constraint firstItem="U0w-m7-F3a" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rCZ-Nj-Zjj"/>
                             <constraint firstItem="H3l-Ht-OgO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zuZ-oa-EQg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,6 +60,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CleanseLogo" width="454" height="116"/>
+        <image name="CleanseLogo-1" width="466" height="115"/>
     </resources>
 </document>

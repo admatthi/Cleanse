@@ -16,6 +16,7 @@ import SwiftyStoreKit
 import StoreKit
 import FBSDKCoreKit
 import UserNotifications
+import Purchases
 
 var tryingtopurchase = Bool()
 
@@ -75,6 +76,8 @@ class PurchaseViewController: UIViewController {
     
     let bundleID = "com.aatech.Cleanse"
     
+    var purchases = RCPurchases(apiKey: "GLZWwnZAKXfcMFaSInneapaeokDPPMic")
+
     var threedaytrial = RegisteredPurchase.threedaytrial
     var onetimepurchase = RegisteredPurchase.OneTimePurchase
     var sevendayfreetrial = RegisteredPurchase.SevenDayFreeTrial
@@ -105,14 +108,32 @@ class PurchaseViewController: UIViewController {
         
         FBSDKAppEvents.logEvent("YearPressed")
         
-        purchase(purchase: onetimepurchase)
+//        purchase(purchase: onetimepurchase)
+        
+        purchases?.entitlements { entitlements in
+            guard let pro = entitlements?["Subscriptions"] else { return }
+            guard let monthly = pro.offerings["Lifetime"] else { return }
+            guard let product = monthly.activeProduct else { return }
+            self.purchases?.makePurchase(product)
+            
+            
+        }
         
     }
     @IBAction func tapButton2(_ sender: Any) {
         
         FBSDKAppEvents.logEvent("MonthlyPressed")
         
-        purchase(purchase: threedaytrial)
+//        purchase(purchase: threedaytrial)
+        
+        purchases?.entitlements { entitlements in
+            guard let pro = entitlements?["Subscriptions"] else { return }
+            guard let monthly = pro.offerings["Monthly"] else { return }
+            guard let product = monthly.activeProduct else { return }
+            self.purchases?.makePurchase(product)
+            
+            
+        }
         
         
         
@@ -123,7 +144,16 @@ class PurchaseViewController: UIViewController {
         
         FBSDKAppEvents.logEvent("12MonthTrialPressed")
         
-        purchase(purchase: sevendayfreetrial)
+//        purchase(purchase: sevendayfreetrial)
+        
+        purchases?.entitlements { entitlements in
+            guard let pro = entitlements?["Subscriptions"] else { return }
+            guard let monthly = pro.offerings["Yearly"] else { return }
+            guard let product = monthly.activeProduct else { return }
+            self.purchases?.makePurchase(product)
+            
+            
+        }
         
     }
     
