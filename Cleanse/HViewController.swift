@@ -36,7 +36,7 @@ class HViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        FBSDKAppEvents.logEvent("Screen 9")
+        FBSDKAppEvents.logEvent("Screen 6")
         // Do any additional setup after loading the view.
     }
 

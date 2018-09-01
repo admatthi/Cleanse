@@ -35,7 +35,7 @@ class GViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        FBSDKAppEvents.logEvent("Screen 8")
+        FBSDKAppEvents.logEvent("Screen 5")
         // Do any additional setup after loading the view.
     }
 

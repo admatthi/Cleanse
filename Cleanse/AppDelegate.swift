@@ -109,6 +109,8 @@ extension AppDelegate: RCPurchasesDelegate {
         tryingtopurchase  = true
         letsgo()
         
+        FBSDKAppEvents.logEvent("Purchased Completed")
+
     }
     
     func purchases(_ purchases: RCPurchases, receivedUpdatedPurchaserInfo purchaserInfo: RCPurchaserInfo) {

@@ -27,7 +27,7 @@ class FViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        FBSDKAppEvents.logEvent("Screen 7")
+        FBSDKAppEvents.logEvent("Screen 4")
         // Do any additional setup after loading the view.
     }
 
