@@ -11,9 +11,10 @@ import FBSDKCoreKit
 
 var ages = [String]()
 
-class AViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var button1: UIButton!
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var agelabel: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
     
@@ -80,10 +81,52 @@ class AViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        
+        
+            return 3
+            
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Sales", for: indexPath) as! SalesCollectionViewCell
+        if indexPath.row == 0 {
+            
+            cell.salesimage.image = UIImage(named: "Arms Copy 3")
+            cell.salestext.text = "Welcome dear! Join us today and get the weight loss meal plan perfect for you"
+        } else {
+            
+            if indexPath.row == 1 {
+                
+                cell.salesimage.image = UIImage(named: "Arms Copy")
+                cell.salestext.text = "You will certainly start losing weight by following our recommendations"
+            } else {
+                
+                if indexPath.row == 2 {
+                    
+                    cell.salesimage.image = UIImage(named: "Arms Copy 2")
+                    cell.salestext.text = "Sign up for a free trial and forget about a strict diet"
+                } else {
+                    
+                }
+                
+            }
+        }
+        
+        return cell
+
+    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         
         return 1
+
     }
+    
+
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         if ages.count > 0 {

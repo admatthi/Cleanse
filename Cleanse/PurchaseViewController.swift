@@ -72,6 +72,7 @@ var price = Double()
 
 class PurchaseViewController: UIViewController {
     
+    @IBOutlet weak var enddate: UILabel!
     @IBOutlet weak var saleslabel: UILabel!
     
     let bundleID = "com.aatech.Cleanse"
@@ -386,6 +387,16 @@ class PurchaseViewController: UIViewController {
         
         ref = Database.database().reference()
         
+        let date = Date()
+        let calendar = Calendar.current
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "LLLL"
+        var todaysdate =  dateFormatter.string(from: date)
+        
+        let year = calendar.component(.year, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        enddate.text = "Ends \(todaysdate), \(day) 2018"
         
         self.becomeFirstResponder() // To get shake gesture
         
@@ -646,6 +657,8 @@ class PurchaseViewController: UIViewController {
 }
 
 var screenshot = UIImage()
+
+
 
 
 

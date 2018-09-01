@@ -55,6 +55,7 @@
 		9D43C646211B2B0800659451 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C645211B2B0800659451 /* SettingsViewController.swift */; };
 		9D43C648211B2B1400659451 /* BillingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C647211B2B1400659451 /* BillingViewController.swift */; };
 		9D43C64A211B339F00659451 /* MealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C649211B339F00659451 /* MealsTableViewCell.swift */; };
+		9DA745C42138E5BA009FABE9 /* SalesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA745C32138E5BA009FABE9 /* SalesCollectionViewCell.swift */; };
 		DB2725367FCEDE97EC69E114 /* Pods_CleanseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20D30A4019BCDF22A6D5FBD /* Pods_CleanseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		9D43C647211B2B1400659451 /* BillingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingViewController.swift; sourceTree = "<group>"; };
 		9D43C649211B339F00659451 /* MealsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewCell.swift; sourceTree = "<group>"; };
 		9D45E72221221EA800A26195 /* Cleanse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cleanse.entitlements; sourceTree = "<group>"; };
+		9DA745C32138E5BA009FABE9 /* SalesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesCollectionViewCell.swift; sourceTree = "<group>"; };
 		A868265761F55598D3AEA878 /* Pods-CleanseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanseTests/Pods-CleanseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8487AA3D090BB663F44EE56 /* Pods-CleanseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanseUITests/Pods-CleanseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C20D30A4019BCDF22A6D5FBD /* Pods_CleanseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +186,7 @@
 				9D43C5E3211A645A00659451 /* AppDelegate.swift */,
 				9D43C5E5211A645A00659451 /* ViewController.swift */,
 				9D43C5E7211A645A00659451 /* Main.storyboard */,
+				9DA745C32138E5BA009FABE9 /* SalesCollectionViewCell.swift */,
 				9D43C62D211A789A00659451 /* AViewController.swift */,
 				9D43C62F211A78B300659451 /* BViewController.swift */,
 				9D43C631211A78C300659451 /* CViewController.swift */,
@@ -519,6 +522,7 @@
 				9D43C634211A78D500659451 /* DViewController.swift in Sources */,
 				9D43C630211A78B300659451 /* BViewController.swift in Sources */,
 				9D43C632211A78C300659451 /* CViewController.swift in Sources */,
+				9DA745C42138E5BA009FABE9 /* SalesCollectionViewCell.swift in Sources */,
 				9D43C63C211A78FD00659451 /* PurchaseViewController.swift in Sources */,
 				9D43C62E211A789A00659451 /* AViewController.swift in Sources */,
 				9D43C640211A796A00659451 /* HViewController.swift in Sources */,
