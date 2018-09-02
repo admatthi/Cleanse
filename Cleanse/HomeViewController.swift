@@ -15,6 +15,8 @@ import FirebaseAuth
 
 var counter = Int()
 
+var meals = [String]()
+
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableVie: UITableView!
@@ -25,11 +27,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.becomeFirstResponder() // To get shake gesture
         
+        tableVie.estimatedRowHeight = 68.0
+        tableVie.rowHeight = UITableViewAutomaticDimension
+        
         if Auth.auth().currentUser == nil {
             // Do smth if user is not logged in
             
             counter = 1
-            queryforfooddata()
+            loadrelevantday()
             
             DispatchQueue.main.async {
                 
@@ -41,7 +46,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             
             counter = 1
-            queryforfooddata()
+            loadrelevantday()
             uid = (Auth.auth().currentUser?.uid)!
 //            let date = Date()
 //            let calendar = Calendar.current
@@ -58,14 +63,199 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let date = Date()
             let formatter = DateFormatter()
             formatter.dateFormat = "EEEE"
-            let dayInWeek = formatter.string(from: date)
+            dayInWeek = formatter.string(from: date)
             
             dayofweek.text = dayInWeek
+            
+            if meals.count > 0 {
+                
+                loadrelevantday()
+                
+            } else {
+                loadrelevantday()
+                
+            }
             
         }
         // Do any additional setup after loading the view.
     }
 
+    var dayInWeek = String()
+    
+    func loadsunday() {
+        
+        meals.append("Chilli Beans & Lentils on Toast")
+        foodimages.append(UIImage(named: "Chilli Beans & Lentils on Toast")!)
+        meals.append("Refresh Juice")
+        foodimages.append(UIImage(named: "Refresh Juice")!)
+        meals.append("Sushi with Tuna")
+        foodimages.append(UIImage(named: "Sushi with Tuna")!)
+        meals.append("Crispbreads with Cottage Cheese & Chives")
+        foodimages.append(UIImage(named: "Crispbreads with Cottage Cheese & Chives")!)
+        meals.append("Quinoa Pilaf with Chicken")
+        foodimages.append(UIImage(named: "Quinoa Pilaf with Chicken")!)
+        tableVie.reloadData()
+    }
+    
+    func loadmonday() {
+        meals.append("Blueberry & Lemon Breakfast Quinoa")
+        foodimages.append(UIImage(named: "Blueberry & Lemon Breakfast Quinoa")!)
+        meals.append("Hardboiled Egg & Tomato on Toast")
+        foodimages.append(UIImage(named: "Hardboiled Egg & Tomato on Toast")!)
+        meals.append("Vietnamese Rolls with Chicken")
+        foodimages.append(UIImage(named: "Vietnamese Rolls with Chicken")!)
+        meals.append("Passionfruit & Mango Mousse")
+        foodimages.append(UIImage(named: "Passionfruit & Mango Mousse")!)
+        meals.append("Beef & Tomato Stew with Couscous")
+        foodimages.append(UIImage(named: "Beef & Tomato Stew with Couscous")!)
+        tableVie.reloadData()
+    }
+    
+    func loadtuesday() {
+        
+        meals.append("Porridge with Stewed Apple")
+        foodimages.append(UIImage(named: "Porridge with Stewed Apple")!)
+        meals.append("Banana & Almonds with Yoghurt")
+        foodimages.append(UIImage(named: "Banana & Almonds with Yoghurt")!)
+        meals.append("Salad & Bean Wrap")
+        foodimages.append(UIImage(named: "Salad & Bean Wrap")!)
+        meals.append("Crispbreads with Avocado & Rocket")
+        foodimages.append(UIImage(named: "Crispbreads with Avocado & Rocket")!)
+        meals.append("Sweet Potato & Black Bean Enchilada")
+        foodimages.append(UIImage(named: "Sweet Potato & Black Bean Enchilada")!)
+        tableVie.reloadData()
+    }
+    
+    func loadwednesday() {
+        
+        meals.append("Berry & Almond Oats")
+        foodimages.append(UIImage(named: "Berry & Almond Oats")!)
+        meals.append("Banana Smoothie")
+        foodimages.append(UIImage(named: "Banana Smoothie")!)
+        meals.append("Tuna Sandwich")
+        foodimages.append(UIImage(named: "Tuna Sandwich")!)
+        meals.append("Ricotta on Rye")
+        foodimages.append(UIImage(named: "Ricotta on Rye")!)
+        meals.append("Salmona Nicoise Salad")
+        foodimages.append(UIImage(named: "Salmon Nicoise Salad")!)
+        tableVie.reloadData()
+    }
+    
+    func loadthursday() {
+        
+        meals.append("Green Smothie Bowl")
+        foodimages.append(UIImage(named: "Green Smoothie Bowl")!)
+        meals.append("Almonds & Grapes")
+        foodimages.append(UIImage(named: "Almonds & Grapes")!)
+        meals.append("Chicken & Salad Wrap")
+        foodimages.append(UIImage(named: "Chicken and Salad Wrap")!)
+        meals.append("Egg Crispbreads")
+        foodimages.append(UIImage(named: "Egg Crispbreads")!)
+        meals.append("Homemade Beef Burger")
+        foodimages.append(UIImage(named: "Homemade Beef Burger")!)
+        tableVie.reloadData()
+    }
+    
+    func loadfriday() {
+        
+        meals.append("Poached Eggs with Asparagus")
+        foodimages.append(UIImage(named: "Poached Eggs with Asparagus")!)
+        meals.append("Berry Yoghurt & Muesli")
+        foodimages.append(UIImage(named: "Berry Yoghurt & Muesli")!)
+        meals.append("Greek Pasta Salad")
+        foodimages.append(UIImage(named: "Greek Pasta Salad")!)
+        meals.append("Crispbreads with Cheese & Tomato")
+        foodimages.append(UIImage(named: "Crispbreads with Cheese & Tomato")!)
+        meals.append("Sweet & Sour Chicken with Rice")
+        foodimages.append(UIImage(named: "Sweet & Sour Chicken with Rice")!)
+        tableVie.reloadData()
+    }
+    
+    func loadsaturday() {
+        
+        meals.append("Avocado & Tomato on Toast")
+        foodimages.append(UIImage(named: "Avocado & Tomato on Toast")!)
+        meals.append("Berry Yoghurt with Almonds")
+        foodimages.append(UIImage(named: "Berry Yoghurt with Almonds")!)
+        meals.append("Waldorf Quinoa Salad")
+        foodimages.append(UIImage(named: "Waldorf Quinoa Salad")!)
+        meals.append("Tomato & Avocado Salsa on Rye")
+        foodimages.append(UIImage(named: "Tomato & Avocado Salsa on Rye")!)
+        meals.append("Lemon & Herb Infused Fish with Vegetables")
+        foodimages.append(UIImage(named: "Lemon & Herb Infused Fish with Vegetables")!)
+
+        tableVie.reloadData()
+    }
+    
+    func loadrelevantday() {
+        
+        meals.removeAll()
+        foodimages.removeAll()
+        
+        if dayInWeek == "Sunday" {
+            
+            loadsunday()
+            
+        } else {
+            
+            if dayInWeek == "Monday" {
+                
+                loadmonday()
+                
+            } else {
+                
+                if dayInWeek == "Tuesday" {
+                    
+                    loadtuesday()
+                    
+                } else {
+                    
+                    
+                    if dayInWeek == "Wednesday" {
+                        
+                        loadwednesday()
+                        
+                    } else {
+                        
+                        if dayInWeek == "Thursday" {
+                            
+                            loadthursday()
+                        } else {
+                            
+                            if dayInWeek == "Friday" {
+                                
+                                loadfriday()
+                            } else {
+                                
+                                if dayInWeek == "Saturday" {
+                                    
+                                    loadsaturday()
+                                    
+                                } else {
+                                    
+                                    if dayInWeek == "Sunday" {
+                                        
+                                        loadsunday()
+                                        
+                                    } else {
+                                        
+                                        
+                                    }
+                                    
+                                }
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                }
+                
+            }
+            
+        }
+        
+    }
     @IBOutlet weak var dayofweek: UILabel!
     @IBAction func tapRefresh(_ sender: Any) {
         
@@ -75,89 +265,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func queryforfooddata() {
-        
-        ref?.child("Food").child("\(counter)").observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            var value = snapshot.value as? NSDictionary
-            
-            
-            if var activityvalue = value?["b1"] as? String {
-                
-                b1 = activityvalue
-            }
-            
-            if var activityvalue = value?["b2"] as? String {
-                
-                b2 = activityvalue
 
-            }
-            
-            if var activityvalue = value?["bs1"] as? String {
-                
-                bs1 = activityvalue
-                
-            }
-            
-            if var activityvalue = value?["l1"] as? String {
-                
-                l1 = activityvalue
-                
-            }
-            
-            if var activityvalue = value?["l2"] as? String {
-                
-                l2 = activityvalue
-                
-            }
-            if var activityvalue = value?["l3"] as? String {
-                
-                l3 = activityvalue
-                
-            }
-            
-            if var activityvalue = value?["ls1"] as? String {
-                
-                ls1 = activityvalue
-                
-            }
-            
-            
-            if var activityvalue = value?["ls2"] as? String {
-                
-                ls2 = activityvalue
-                
-            }
-            if var activityvalue = value?["ls3"] as? String {
-                
-                ls3 = activityvalue
-                
-            }
-            
-            if var activityvalue = value?["d1"] as? String {
-                
-                d1 = activityvalue
-                
-            }
-            
-            
-            if var activityvalue = value?["d2"] as? String {
-                
-                d2 = activityvalue
-                
-            }
-            
-            if var activityvalue = value?["d3"] as? String {
-                
-                d3 = activityvalue
-                
-            }
-            
-        
-            self.tableVie.reloadData()
-        })
-    }
 
     /*
     // MARK: - Navigation
@@ -172,8 +280,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
         
-        return 11
+        return meals.count
     
+    }
+    
+    func tableView(_ tableView: UITableView,heightForRowAt indexPath:IndexPath) -> CGFloat
+    {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -186,131 +304,50 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if foodimages.count > indexPath.row {
            
-//            cell.foodimage.image = foodimages[indexPath.row]
+            cell.foodimage.image = foodimages[indexPath.row]
+            cell.food.text = meals[indexPath.row]
             
         }
 
         if indexPath.row == 0  {
             
-            cell.nutrient.text = "Lean Protein"
-            cell.food.text = b1
             cell.category.text = "Breakfast"
-            cell.foodimage.image = UIImage(named: "\(b1)")
-            cell.servings.text = "6 servings"
+
             
         } else {
             
             if indexPath.row == 1  {
                 
-                cell.nutrient.text = "Carbohydrates"
-                cell.food.text = b2
-                cell.category.text = "Breakfast"
-                cell.foodimage.image = UIImage(named: "\(b2)")
-                cell.servings.text = "3 servings"
+                cell.category.text = "Morning Snack"
+
             } else {
                 
                 if indexPath.row == 2  {
                     
-                    cell.nutrient.text = "Vegetables"
-                    cell.food.text = bs1
-                    cell.category.text = "Breakfast Snack"
-                    cell.foodimage.image = UIImage(named: "\(bs1)")
-                    cell.servings.text = "1 serving"
+                    cell.category.text = "Lunch"
+
                     
                 } else {
                     
                     if indexPath.row == 3  {
                         
-                        cell.nutrient.text = "Lean Protein"
-                        cell.food.text = l1
                         cell.category.text = "Lunch"
-                        cell.foodimage.image = UIImage(named: "\(l1)")
-                        cell.servings.text = "5 servings"
+
                         
                     } else {
                         
                         if indexPath.row == 4  {
                             
-                            cell.nutrient.text = "Carbohydrates"
-                            cell.food.text = l2
-                            cell.category.text = "Lunch"
-                            cell.foodimage.image = UIImage(named: "\(l2)")
-                            cell.servings.text = "3 servings"
+                            cell.category.text = "Afternoon Snack"
+
                         } else {
                             
                             if indexPath.row == 5  {
                                 
-                                cell.nutrient.text = "Vegetables"
-                                cell.food.text = l3
-                                cell.category.text = "Lunch"
-                                cell.foodimage.image = UIImage(named: "\(l3)")
-                                cell.servings.text = "1 servings"
+                                cell.category.text = "Dinner"
+
                             } else {
-                                
-                                if indexPath.row == 6  {
-                                    
-                                    cell.nutrient.text = "Lean Protein"
-                                    cell.food.text = ls1
-                                    cell.category.text = "Lunch Snack"
-                                    cell.foodimage.image = UIImage(named: "\(ls1)")
-                                    cell.servings.text = "5 servings"
-                                } else {
-                                    
-                                    if indexPath.row == 7  {
-                                        
-                                        cell.nutrient.text = "Carbohydrates"
-                                        cell.food.text = ls2
-                                        cell.category.text = "Lunch Snack"
-                                        cell.foodimage.image = UIImage(named: "\(ls2)")
-                                        cell.servings.text = "3 servings"
-                                    } else {
-                                        
-                                        if indexPath.row == 8  {
-                                            
-                                            cell.nutrient.text = "Vegetables"
-                                            cell.food.text = ls3
-                                            cell.category.text = "Lunch Snack"
-                                            cell.foodimage.image = UIImage(named: "\(ls3)")
-                                            cell.servings.text = "1 servings"
-                                        } else {
-                                            
-                                            if indexPath.row == 9  {
-                                                
-                                                cell.nutrient.text = "Lean Protein"
-                                                cell.food.text = d1
-                                                cell.category.text = "Dinner"
-                                                cell.foodimage.image = UIImage(named: "\(d1)")
-                                                cell.servings.text = "5 servings"
-                                            } else {
-                                                
-                                                if indexPath.row == 10  {
-                                                    
-                                                    cell.nutrient.text = "Carbohydrates"
-                                                    cell.food.text = d2
-                                                    cell.category.text = "Dinner"
-                                                    cell.foodimage.image = UIImage(named: "\(d2)")
-                                                    cell.servings.text = "2 servings"
-                                                } else {
-                                                    
-                                                    if indexPath.row == 11  {
-                                                        
-                                                        cell.nutrient.text = "Vegetables"
-                                                        cell.food.text = d3
-                                                        cell.category.text = "Dinner"
-                                                        cell.foodimage.image = UIImage(named: "\(d3)")
-                                                        cell.servings.text = "1 servings"
-                                                    } else {
-                                                        
-        
-                                                            cell.nutrient.text = ""
-                                                            cell.food.text = ""
-                                                            cell.category.text = ""
-                                                            cell.servings.text = "5 servings"
-                                                        }
-                                                }
-                                            }
-                                        }
-                                    }
+                              
                                 }
                             }
                         }
@@ -318,8 +355,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     }
                 }
             }
-            
-        }
         
         return cell
     }
@@ -328,17 +363,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         counter += 1
         
-        if counter >= 7 {
-            
-            counter = 0
-            
-            queryforfooddata()
-            
-        } else {
-            
-            queryforfooddata()
-            
-        }
         
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE"
@@ -349,9 +373,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         var nextdate = Calendar.current.date(byAdding: .day, value: +1, to: this3!)!
         
 
-        let dayInWeek = formatter.string(from: nextdate)
+        dayInWeek = formatter.string(from: nextdate)
         
         dayofweek.text = dayInWeek
+        
+        loadrelevantday()
+
        
     }
     
@@ -365,11 +392,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             counter = 0
             
-            queryforfooddata()
+            loadrelevantday()
             
         } else {
             
-            queryforfooddata()
+            loadrelevantday()
             
         }
         
@@ -382,112 +409,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         var nextdate = Calendar.current.date(byAdding: .day, value: -1, to: this3!)!
         
         
-        let dayInWeek = formatter.string(from: nextdate)
+        dayInWeek = formatter.string(from: nextdate)
         
+        loadrelevantday()
+
         dayofweek.text = dayInWeek
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if indexPath.row == 0  {
-            
-            selectednutrient = "Lean Protein"
-            selectedcategory = "Breakfast"
-
-        } else {
-            
-            if indexPath.row == 1  {
-                
-                selectednutrient = "Carbohydrates"
-                selectedcategory = "Breakfast"
-
-            } else {
-                
-                if indexPath.row == 2  {
-                    selectednutrient = "Vegetables"
-                    selectedcategory = "Breakfast Snack"
-
-                    
-                } else {
-                    
-                    if indexPath.row == 3  {
-                        selectednutrient = "Lean Protein"
-                        selectedcategory = "Lunch"
-
-                        
-                    } else {
-                        
-                        if indexPath.row == 4  {
-                            selectednutrient = "Carbohydrates"
-                            selectedcategory = "Lunch"
-
-                        } else {
-                            
-                            if indexPath.row == 5  {
-                                selectednutrient = "Vegetables"
-                                selectedcategory = "Lunch"
-
-                            } else {
-                                
-                                if indexPath.row == 6  {
-                                    selectednutrient = "Lean Protein"
-                                    selectedcategory = "Lunch Snack"
-
-                                } else {
-                                    
-                                    if indexPath.row == 7  {
-                                        selectednutrient = "Carbohydrates"
-                                        selectedcategory = "Lunch Snack"
-
-                                    } else {
-                                        
-                                        if indexPath.row == 8  {
-                                            selectednutrient = "Vegetables"
-                                            selectedcategory = "Lunch Snack"
-
-                                        } else {
-                                            
-                                            if indexPath.row == 9  {
-                                                selectednutrient = "Lean Protein"
-                                                selectedcategory = "Dinner"
-
-                                            } else {
-                                                
-                                                if indexPath.row == 10  {
-                                                    selectednutrient = "Carbohydrates"
-                                                    selectedcategory = "Dinner"
-
-                                                } else {
-                                                    
-                                                    if indexPath.row == 11  {
-                                                        selectednutrient = "Vegetables"
-                                                        selectedcategory = "Dinner"
-
-                                                    } else {
-                                                      
-
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        
-                    }
-                }
-            }
-            
-        }
-        
-        self.performSegue(withIdentifier: "HomeToApproved", sender: self)
+        selectedmeal = meals[indexPath.row]
+        self.performSegue(withIdentifier: "MealToRecipe", sender: self)
 
     }
 }
 
 var selectedcategory = String()
-var selectednutrient = String()
+var selectedmeal = String()
 
 var b1 = String()
 var b2 = String()

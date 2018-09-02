@@ -10,6 +10,12 @@
 		17C25A4F7DD40DEED8AE281F /* Pods_Cleanse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626D84ADEA4B14D0498DBFF6 /* Pods_Cleanse.framework */; };
 		77E805DD249E4D8E75E12408 /* Pods_CleanseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8638814EF45853CB3398D2E3 /* Pods_CleanseTests.framework */; };
 		9D191EC6213B071E00B91985 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D191EC5213B071D00B91985 /* InformationViewController.swift */; };
+		9D191EC8213B4A7B00B91985 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D191EC7213B4A7B00B91985 /* RecipeViewController.swift */; };
+		9D191ECA213B4A9000B91985 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D191EC9213B4A9000B91985 /* RecipeTableViewCell.swift */; };
+		9D191ECC213B4B3A00B91985 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D191ECB213B4B3A00B91985 /* WorkoutViewController.swift */; };
+		9D191ECE213B4B5500B91985 /* WorkoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D191ECD213B4B5500B91985 /* WorkoutCollectionViewCell.swift */; };
+		9D191ED0213B4BCF00B91985 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D191ECF213B4BCF00B91985 /* ExerciseViewController.swift */; };
+		9D191ED2213B4BE700B91985 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D191ED1213B4BE700B91985 /* ExerciseTableViewCell.swift */; };
 		9D2B8C272128B7D300188DC5 /* ApprovedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */; };
 		9D2B8C292128B7E300188DC5 /* ApprovedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */; };
 		9D3E1F13211B3C7C00CA9E57 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3E1F12211B3C7C00CA9E57 /* StoreKit.framework */; };
@@ -82,6 +88,12 @@
 		8638814EF45853CB3398D2E3 /* Pods_CleanseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		994ACEBC28352862D6DBA3A6 /* Pods-Cleanse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cleanse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cleanse/Pods-Cleanse.debug.xcconfig"; sourceTree = "<group>"; };
 		9D191EC5213B071D00B91985 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		9D191EC7213B4A7B00B91985 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		9D191EC9213B4A9000B91985 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		9D191ECB213B4B3A00B91985 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		9D191ECD213B4B5500B91985 /* WorkoutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCollectionViewCell.swift; sourceTree = "<group>"; };
+		9D191ECF213B4BCF00B91985 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		9D191ED1213B4BE700B91985 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovedTableViewCell.swift; sourceTree = "<group>"; };
 		9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovedViewController.swift; sourceTree = "<group>"; };
 		9D3E1F12211B3C7C00CA9E57 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -199,14 +211,20 @@
 				9D43C63F211A796A00659451 /* HViewController.swift */,
 				9D43C641211A799500659451 /* LoginViewController.swift */,
 				9D43C63B211A78FD00659451 /* PurchaseViewController.swift */,
-				9D43C63D211A790600659451 /* HomeViewController.swift */,
-				9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */,
-				9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */,
-				9D43C649211B339F00659451 /* MealsTableViewCell.swift */,
 				9D43C645211B2B0800659451 /* SettingsViewController.swift */,
 				9D43C647211B2B1400659451 /* BillingViewController.swift */,
 				9D191EC5213B071D00B91985 /* InformationViewController.swift */,
+				9D43C63D211A790600659451 /* HomeViewController.swift */,
+				9D43C649211B339F00659451 /* MealsTableViewCell.swift */,
+				9D191EC7213B4A7B00B91985 /* RecipeViewController.swift */,
+				9D191EC9213B4A9000B91985 /* RecipeTableViewCell.swift */,
+				9D191ECB213B4B3A00B91985 /* WorkoutViewController.swift */,
+				9D191ECD213B4B5500B91985 /* WorkoutCollectionViewCell.swift */,
+				9D191ECF213B4BCF00B91985 /* ExerciseViewController.swift */,
+				9D191ED1213B4BE700B91985 /* ExerciseTableViewCell.swift */,
 				9D43C5EA211A645D00659451 /* Assets.xcassets */,
+				9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */,
+				9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */,
 				9D43C5EC211A645D00659451 /* LaunchScreen.storyboard */,
 				9D43C643211A89C700659451 /* GoogleService-Info.plist */,
 				9D43C5EF211A645D00659451 /* Info.plist */,
@@ -521,6 +539,8 @@
 			files = (
 				9D43C5E6211A645A00659451 /* ViewController.swift in Sources */,
 				9D2B8C292128B7E300188DC5 /* ApprovedViewController.swift in Sources */,
+				9D191EC8213B4A7B00B91985 /* RecipeViewController.swift in Sources */,
+				9D191ECA213B4A9000B91985 /* RecipeTableViewCell.swift in Sources */,
 				9D43C63A211A78F100659451 /* GViewController.swift in Sources */,
 				9D43C634211A78D500659451 /* DViewController.swift in Sources */,
 				9D43C630211A78B300659451 /* BViewController.swift in Sources */,
@@ -528,14 +548,18 @@
 				9DA745C42138E5BA009FABE9 /* SalesCollectionViewCell.swift in Sources */,
 				9D43C63C211A78FD00659451 /* PurchaseViewController.swift in Sources */,
 				9D43C62E211A789A00659451 /* AViewController.swift in Sources */,
+				9D191ED0213B4BCF00B91985 /* ExerciseViewController.swift in Sources */,
 				9D43C640211A796A00659451 /* HViewController.swift in Sources */,
 				9D43C64A211B339F00659451 /* MealsTableViewCell.swift in Sources */,
 				9D43C63E211A790600659451 /* HomeViewController.swift in Sources */,
 				9D43C648211B2B1400659451 /* BillingViewController.swift in Sources */,
 				9D43C646211B2B0800659451 /* SettingsViewController.swift in Sources */,
 				9D43C638211A78E900659451 /* FViewController.swift in Sources */,
+				9D191ECC213B4B3A00B91985 /* WorkoutViewController.swift in Sources */,
 				9D43C5E4211A645A00659451 /* AppDelegate.swift in Sources */,
 				9D43C642211A799500659451 /* LoginViewController.swift in Sources */,
+				9D191ED2213B4BE700B91985 /* ExerciseTableViewCell.swift in Sources */,
+				9D191ECE213B4B5500B91985 /* WorkoutCollectionViewCell.swift in Sources */,
 				9D43C636211A78E000659451 /* EViewController.swift in Sources */,
 				9D2B8C272128B7D300188DC5 /* ApprovedTableViewCell.swift in Sources */,
 				9D191EC6213B071E00B91985 /* InformationViewController.swift in Sources */,

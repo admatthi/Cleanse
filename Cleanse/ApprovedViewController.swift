@@ -28,10 +28,8 @@ class ApprovedViewController: UIViewController, UITableViewDelegate, UITableView
         foods.removeAll()
         servings.removeAll()
         
-        queryforfooddata()
         
         category.text = selectedcategory
-        nutrient.text = selectednutrient
         
         // Do any additional setup after loading the view.
     }
@@ -41,122 +39,122 @@ class ApprovedViewController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    func queryforfooddata() {
-        
-        ref?.child("Food").child(selectednutrient).observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            var value = snapshot.value as? NSDictionary
-            
-            
-            if var activityvalue = value?["1"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            
-            if var activityvalue = value?["2"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            if var activityvalue = value?["3"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            if var activityvalue = value?["4"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            if var activityvalue = value?["5"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            if var activityvalue = value?["6"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            if var activityvalue = value?["7"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            if var activityvalue = value?["8"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            if var activityvalue = value?["9"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            if var activityvalue = value?["10"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            if var activityvalue = value?["11"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            if var activityvalue = value?["12"] as? String {
-                
-                foods.append(activityvalue)
-            }
-            
-            if var activityvalue = value?["1s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            
-            if var activityvalue = value?["2s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            if var activityvalue = value?["3s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            if var activityvalue = value?["4s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            if var activityvalue = value?["5s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            if var activityvalue = value?["6s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            if var activityvalue = value?["7s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            if var activityvalue = value?["8s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            if var activityvalue = value?["9s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            if var activityvalue = value?["10s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            if var activityvalue = value?["11s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            if var activityvalue = value?["12s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            
-            if var activityvalue = value?["13s"] as? String {
-                
-                servings.append(activityvalue)
-            }
-            
-            self.tableView.reloadData()
-
-        })
-    }
+//    func queryforfooddata() {
+//        
+//        ref?.child("Food").child(selectednutrient).observeSingleEvent(of: .value, with: { (snapshot) in
+//            
+//            var value = snapshot.value as? NSDictionary
+//            
+//            
+//            if var activityvalue = value?["1"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            
+//            if var activityvalue = value?["2"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            if var activityvalue = value?["3"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            if var activityvalue = value?["4"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            if var activityvalue = value?["5"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            if var activityvalue = value?["6"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            if var activityvalue = value?["7"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            if var activityvalue = value?["8"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            if var activityvalue = value?["9"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            if var activityvalue = value?["10"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            if var activityvalue = value?["11"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            if var activityvalue = value?["12"] as? String {
+//                
+//                foods.append(activityvalue)
+//            }
+//            
+//            if var activityvalue = value?["1s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            
+//            if var activityvalue = value?["2s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            if var activityvalue = value?["3s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            if var activityvalue = value?["4s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            if var activityvalue = value?["5s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            if var activityvalue = value?["6s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            if var activityvalue = value?["7s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            if var activityvalue = value?["8s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            if var activityvalue = value?["9s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            if var activityvalue = value?["10s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            if var activityvalue = value?["11s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            if var activityvalue = value?["12s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            
+//            if var activityvalue = value?["13s"] as? String {
+//                
+//                servings.append(activityvalue)
+//            }
+//            
+//            self.tableView.reloadData()
+//
+//        })
+//    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
