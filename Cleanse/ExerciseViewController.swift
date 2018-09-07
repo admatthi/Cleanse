@@ -19,6 +19,12 @@ var reps = [String]()
 
 class ExerciseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBAction func tapComplete(_ sender: Any) {
+        
+        ref?.child(uid).updateChildValues(["Last Completed" : "\(selectedday)"])
+        
+        self.performSegue(withIdentifier: "ExerciseToWorkouts", sender: self)
+    }
     @IBOutlet weak var daytitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -48,15 +54,14 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
                 
             } else {
              
-                if selectedtitle == "Full Body" {
+                if selectedtitle == "Back" {
                     
-                    loadbody()
+                    loadback()
                     
                 } else {
                     
                     if selectedtitle == "Rest" {
                         
-                        loadbody()
                         
                     } else {
                         
@@ -72,7 +77,7 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func loadlegs() {
         
-        circuittitles.append("Circuit 1&3")
+        circuittitles.append("Circuit 1 & 3")
         numberofexercises.append("4 exercises")
         length.append("7 Minutes")
         length.append("-")
@@ -84,7 +89,7 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
         circuittitles.append("-")
         circuittitles.append("-")
         circuittitles.append("-")
-        circuittitles.append("Circuit  2& 4")
+        circuittitles.append("Circuit 2 & 4")
         numberofexercises.append("4 exercises")
         length.append("7 Minutes")
         length.append("-")
@@ -96,98 +101,43 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
         circuittitles.append("-")
         circuittitles.append("-")
         circuittitles.append("-")
-        exercisenames.append("Squats")
+        exercisenames.append("1. Squats")
         reps.append("12 Reps")
         exerciseimages1.append(UIImage(named: "Squat1")!)
         exerciseimages2.append(UIImage(named: "Squat2")!)
-        exercisenames.append("Leg Swing")
+        exercisenames.append("2. Leg Swing")
         reps.append("25 Reps Per Side")
         exerciseimages1.append(UIImage(named: "Leg Swing1")!)
         exerciseimages2.append(UIImage(named: "Leg Swing2")!)
         exerciseimages1.append(UIImage(named: "Glute Bridge1")!)
         exerciseimages2.append(UIImage(named: "Glute Bridge2")!)
-        exercisenames.append("Glute Bridge")
+        exercisenames.append("3. Glute Bridge")
         reps.append("10 Reps")
         exerciseimages1.append(UIImage(named: "Inner Thigh Lift1")!)
         exerciseimages2.append(UIImage(named: "Inner Thigh Lift2")!)
-        exercisenames.append("Inner Thigh Lift")
+        exercisenames.append("4. Inner Thigh Lift")
         reps.append("15 Reps Per Side")
         exerciseimages1.append(UIImage(named: "Slide Leg Lift1")!)
         exerciseimages2.append(UIImage(named: "Slide Leg Lift2")!)
-        exercisenames.append("Slide Leg Lift")
+        exercisenames.append("1. Slide Leg Lift")
         reps.append("20 Reps Per Side")
         exerciseimages1.append(UIImage(named: "Glute Kickbacks1")!)
         exerciseimages2.append(UIImage(named: "Glute Kickbacks2")!)
-        exercisenames.append("Glute Kickbacks")
+        exercisenames.append("2. Glute Kickbacks")
         reps.append("15 Reps Per Side")
         exerciseimages1.append(UIImage(named: "Pulsing Lunges1")!)
         exerciseimages2.append(UIImage(named: "Pulsing Lunges2")!)
-        exercisenames.append("Pulsing Lunges")
+        exercisenames.append("3. Pulsing Lunges")
         reps.append("15 Reps Per Side")
         exerciseimages1.append(UIImage(named: "Marching Hip1")!)
         exerciseimages2.append(UIImage(named: "Marching Hip2")!)
-        exercisenames.append("Marching Hip")
+        exercisenames.append("4. Marching Hip")
         reps.append("15 Reps Per Side")
 
         
     }
     
     func loadarms() {
-        
-        circuittitles.append("Circuit 1&3")
-        numberofexercises.append("4 exercises")
-        length.append("7 Minutes")
-        length.append("-")
-        length.append("-")
-        length.append("-")
-        numberofexercises.append("-")
-        numberofexercises.append("-")
-        numberofexercises.append("-")
-        circuittitles.append("-")
-        circuittitles.append("-")
-        circuittitles.append("-")
-        circuittitles.append("Circuit  2& 4")
-        numberofexercises.append("3 exercises")
-        length.append("7 Minutes")
-        length.append("-")
-        length.append("-")
-        numberofexercises.append("-")
-        numberofexercises.append("-")
-        circuittitles.append("-")
-        circuittitles.append("-")
-        exercisenames.append("Triple Tricep Push Up")
-        reps.append("10 Reps Per Side")
-        exerciseimages1.append(UIImage(named: "Triple Tricep Push Up1")!)
-        exerciseimages2.append(UIImage(named: "Triple Tricep Push Up2")!)
-        exercisenames.append("Lateral Raises")
-        reps.append("15 Reps Per Side")
-        exerciseimages1.append(UIImage(named: "Lateral Raises1")!)
-        exerciseimages2.append(UIImage(named: "Lateral Raises2")!)
-        exerciseimages1.append(UIImage(named: "Triceps Extension1")!)
-        exerciseimages2.append(UIImage(named: "Triceps Extension2")!)
-        exercisenames.append("Triceps Extension")
-        reps.append("15 Reps")
-        exerciseimages1.append(UIImage(named: "Side Plank1")!)
-        exerciseimages2.append(UIImage(named: "Side Plank2")!)
-        exercisenames.append("Side Plank")
-        reps.append("30 secs Per Side")
-        exerciseimages1.append(UIImage(named: "Slide Leg Lift1")!)
-        exerciseimages2.append(UIImage(named: "Slide Leg Lift2")!)
-        exercisenames.append("Tricep Kickback")
-        reps.append("15 Reps")
-        exerciseimages1.append(UIImage(named: "Tricep Kickback1")!)
-        exerciseimages2.append(UIImage(named: "Tricep Kickback2")!)
-        exercisenames.append("Squat & Curl")
-        reps.append("15 Reps")
-        exerciseimages1.append(UIImage(named: "Squat & Curl1")!)
-        exerciseimages2.append(UIImage(named: "Squat & Curl2")!)
-        exercisenames.append("Bent Over Row")
-        reps.append("15 Reps")
-        exerciseimages1.append(UIImage(named: "Bent Over Row1")!)
-        exerciseimages2.append(UIImage(named: "Bent Over Row2")!)
-    }
-    
-    func loadbody() {
         
         circuittitles.append("Circuit 1 & 3")
         numberofexercises.append("4 exercises")
@@ -201,7 +151,50 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
         circuittitles.append("-")
         circuittitles.append("-")
         circuittitles.append("-")
-        circuittitles.append("Circuit  2 & 4")
+        circuittitles.append("Circuit 2 & 4")
+        numberofexercises.append("3 exercises")
+        length.append("7 Minutes")
+        length.append("-")
+        length.append("-")
+        numberofexercises.append("-")
+        numberofexercises.append("-")
+        circuittitles.append("-")
+        circuittitles.append("-")
+        exercisenames.append("1. Triple Tricep Push Up")
+        reps.append("10 Reps Per Side")
+        exerciseimages1.append(UIImage(named: "Triple Tricep Push Up1")!)
+        exerciseimages2.append(UIImage(named: "Triple Tricep Push Up2")!)
+        exercisenames.append("2. Lateral Raises")
+        reps.append("15 Reps Per Side")
+        exerciseimages1.append(UIImage(named: "Lateral Raises1")!)
+        exerciseimages2.append(UIImage(named: "Lateral Raises2")!)
+        exerciseimages1.append(UIImage(named: "Triceps Extension1")!)
+        exerciseimages2.append(UIImage(named: "Triceps Extension2")!)
+        exercisenames.append("3. Triceps Extension")
+        reps.append("15 Reps")
+        exerciseimages1.append(UIImage(named: "Side Plank1")!)
+        exerciseimages2.append(UIImage(named: "Side Plank2")!)
+        exercisenames.append("4. Side Plank")
+        reps.append("30 secs Per Side")
+        exerciseimages1.append(UIImage(named: "Slide Leg Lift1")!)
+        exerciseimages2.append(UIImage(named: "Slide Leg Lift2")!)
+        exercisenames.append("1. Tricep Kickback")
+        reps.append("15 Reps")
+        exerciseimages1.append(UIImage(named: "Tricep Kickback1")!)
+        exerciseimages2.append(UIImage(named: "Tricep Kickback2")!)
+        exercisenames.append("2. Squat & Curl")
+        reps.append("15 Reps")
+        exerciseimages1.append(UIImage(named: "Squat & Curl1")!)
+        exerciseimages2.append(UIImage(named: "Squat & Curl2")!)
+        exercisenames.append("3. Bent Over Row")
+        reps.append("15 Reps")
+        exerciseimages1.append(UIImage(named: "Bent Over Row1")!)
+        exerciseimages2.append(UIImage(named: "Bent Over Row2")!)
+    }
+    
+    func loadback() {
+        
+        circuittitles.append("Circuit 1 & 3")
         numberofexercises.append("4 exercises")
         length.append("7 Minutes")
         length.append("-")
@@ -213,37 +206,49 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
         circuittitles.append("-")
         circuittitles.append("-")
         circuittitles.append("-")
-        exercisenames.append("Bird Dog")
+        circuittitles.append("Circuit 2 & 4")
+        numberofexercises.append("4 exercises")
+        length.append("7 Minutes")
+        length.append("-")
+        length.append("-")
+        length.append("-")
+        numberofexercises.append("-")
+        numberofexercises.append("-")
+        numberofexercises.append("-")
+        circuittitles.append("-")
+        circuittitles.append("-")
+        circuittitles.append("-")
+        exercisenames.append("1. Bird Dog")
         reps.append("15 Reps")
         exerciseimages1.append(UIImage(named: "Bird Dog1")!)
         exerciseimages2.append(UIImage(named: "Bird Dog2")!)
-        exercisenames.append("Lying Knee Hug")
+        exercisenames.append("2. Lying Knee Hug")
         reps.append("15 Reps")
         exerciseimages1.append(UIImage(named: "Lying Knee Hug1")!)
         exerciseimages2.append(UIImage(named: "Lying Knee Hug2")!)
         exerciseimages1.append(UIImage(named: "Spine Stretch1")!)
         exerciseimages2.append(UIImage(named: "Spine Stretch2")!)
-        exercisenames.append("Spine Stretch")
+        exercisenames.append("3. Spine Stretch")
         reps.append("20 Reps")
         exerciseimages1.append(UIImage(named: "Kneeling Oblique Crunch1")!)
         exerciseimages2.append(UIImage(named: "Kneeling Oblique Crunch2")!)
-        exercisenames.append("Kneeling Oblique Crunch")
+        exercisenames.append("4. Kneeling Oblique Crunch")
         reps.append("15 Reps Per Side")
         exerciseimages1.append(UIImage(named: "Runner's Crunch1")!)
         exerciseimages2.append(UIImage(named: "Runner's Crunch2")!)
-        exercisenames.append("Runner's Crunch")
+        exercisenames.append("1. Runner's Crunch")
         reps.append("15 Reps")
         exerciseimages1.append(UIImage(named: "Rolling Over1")!)
         exerciseimages2.append(UIImage(named: "Rolling Over2")!)
-        exercisenames.append("Rolling Over")
+        exercisenames.append("2. Rolling Over")
         reps.append("20 Reps")
         exerciseimages1.append(UIImage(named: "The Dead Bug1")!)
         exerciseimages2.append(UIImage(named: "The Dead Bug2")!)
-        exercisenames.append("The Dead Bug")
+        exercisenames.append("3. The Dead Bug")
         reps.append("20 Reps")
         exerciseimages1.append(UIImage(named: "McGill Curl Up1")!)
         exerciseimages2.append(UIImage(named: "McGill Curl Up2")!)
-        exercisenames.append("McGill Curl Up")
+        exercisenames.append("4. McGill Curl Up")
         reps.append("15 Reps")
 
     }
@@ -289,15 +294,28 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
                 cell.circuitminute.alpha = 0
                 cell.circuititle.alpha = 0
                 cell.circuitexercise.alpha = 0
+                cell.greenbackgorund.alpha = 0
+                cell.bluelabel.alpha = 1
                 
             } else {
                 
+                cell.bluelabel.alpha = 0
+                cell.greenbackgorund.alpha = 1
                 cell.circuitminute.alpha = 1
                 cell.circuititle.alpha = 1
                 cell.circuitexercise.alpha = 1
                 
             }
             
+            if circuittitles[indexPath.row] == "Circuit 2 & 4" {
+                
+                cell.greenbackgorund.backgroundColor  = mighty
+                
+            } else {
+                
+                cell.greenbackgorund.backgroundColor  = foam
+
+            }
         } else {
             
             
@@ -318,3 +336,6 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
     */
 
 }
+
+let mighty = UIColor(red:0.90, green:0.33, blue:0.57, alpha:1.0)
+

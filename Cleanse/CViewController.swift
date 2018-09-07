@@ -101,6 +101,7 @@ class CViewController: UIViewController {
         b4pressed = false
         
         FBSDKAppEvents.logEvent("Screen 3")
+        
         // Do any additional setup after loading the view.
     }
 

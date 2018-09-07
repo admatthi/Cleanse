@@ -97,6 +97,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 newuser = false
                 
+                ref?.child(uid).updateChildValues(["Goal Weight" : goalweight, "Weight" : weight, "Height Ft" : heightft, "Height In" : heightin, "Problem Area" : focusarea, "Time" : time])
+                
                 DispatchQueue.main.async {
                     
                     self.performSegue(withIdentifier: "LoginToHome", sender: self)

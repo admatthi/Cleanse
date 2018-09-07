@@ -23,6 +23,7 @@ class HViewController: UIViewController {
         
         var test = Int(slider1.value)
         tflabel.text = "\(test) lbs"
+        weight = "\(test) lbs"
     }
     @IBOutlet weak var tflabel: UILabel!
     
@@ -31,6 +32,8 @@ class HViewController: UIViewController {
         
         var test = Int(slider2.value)
         tflabel2.text = "\(test) lbs"
+        goalweight = "\(test) lbs"
+
     }
     
     override func viewDidLoad() {
@@ -38,6 +41,8 @@ class HViewController: UIViewController {
 
         FBSDKAppEvents.logEvent("Screen 6")
         // Do any additional setup after loading the view.
+        weight = "-"
+        goalweight = "-"
     }
 
     override func didReceiveMemoryWarning() {

@@ -22,12 +22,17 @@ class FViewController: UIViewController {
         
         var test = Int(slider1.value)
         tflabel.text = "\(test) minutes"
+        time = "\(test) minutes"
+
     }
     @IBOutlet weak var tflabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         FBSDKAppEvents.logEvent("Screen 4")
+        
+        time = "-"
+
         // Do any additional setup after loading the view.
     }
 

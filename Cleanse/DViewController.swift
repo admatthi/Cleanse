@@ -99,7 +99,8 @@ class DViewController: UIViewController {
         b2pressed = false
         b3pressed = false
         b4pressed = false
-        
+        time = "-"
+
         FBSDKAppEvents.logEvent("Screen 4")
         // Do any additional setup after loading the view.
     }

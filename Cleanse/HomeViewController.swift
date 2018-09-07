@@ -132,7 +132,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         foodimages.append(UIImage(named: "Berry & Almond Oats")!)
         meals.append("Banana Smoothie")
         foodimages.append(UIImage(named: "Banana Smoothie")!)
-        meals.append("Tuna Sandwich")
+        meals.append("Tuna Sandwhich")
         foodimages.append(UIImage(named: "Tuna Sandwich")!)
         meals.append("Ricotta on Rye")
         foodimages.append(UIImage(named: "Ricotta on Rye")!)
@@ -331,14 +331,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     
                     if indexPath.row == 3  {
                         
-                        cell.category.text = "Lunch"
+                        cell.category.text = "Afternoon Snack"
 
                         
                     } else {
                         
                         if indexPath.row == 4  {
                             
-                            cell.category.text = "Afternoon Snack"
+                            cell.category.text = "Dinner"
 
                         } else {
                             
@@ -418,11 +418,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedmeal = meals[indexPath.row]
+        selectedimage2 = foodimages[indexPath.row]
         self.performSegue(withIdentifier: "MealToRecipe", sender: self)
 
     }
 }
-
+var selectedimage2 = UIImage()
 var selectedcategory = String()
 var selectedmeal = String()
 

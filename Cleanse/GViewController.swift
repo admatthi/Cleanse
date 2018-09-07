@@ -23,6 +23,7 @@ class GViewController: UIViewController {
         
         var test = Int(slider1.value)
         tflabel.text = "\(test) feet"
+        heightft = "\(test) feet"
     }
     @IBOutlet weak var tflabel: UILabel!
     
@@ -31,12 +32,16 @@ class GViewController: UIViewController {
         
         var test = Int(slider2.value)
         tflabel2.text = "\(test) inches"
+        heightin = "\(test) inches"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         FBSDKAppEvents.logEvent("Screen 5")
         // Do any additional setup after loading the view.
+        
+        heightft = "-"
+        heightin = "-"
     }
 
     override func didReceiveMemoryWarning() {

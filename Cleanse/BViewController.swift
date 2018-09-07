@@ -25,21 +25,26 @@ class BViewController: UIViewController {
     @IBOutlet weak var mainimage: UIImageView!
     @IBAction func tapThighs(_ sender: Any) {
         
-        mainimage.image = UIImage(named: "Legs")
+        mainimage.image = UIImage(named: "LegsPhoto")
+        focusarea = "Thick Legs & Thighs"
     }
     @IBOutlet weak var tapthighs: UIButton!
     @IBAction func taparms(_ sender: Any) {
         
-        mainimage.image = UIImage(named: "Arms")
+        mainimage.image = UIImage(named: "ArmsPhoto")
+        focusarea = "Flabby Arms"
     }
     @IBAction func tapchest(_ sender: Any) {
         
         mainimage.image = UIImage(named: "Chest")
+        focusarea = "Saggy Breasts"
     }
     @IBAction func tapfat(_ sender: Any) {
         
         mainimage.image = UIImage(named: "Belly")
+        focusarea = "Belly Fat"
     }
+    
     @IBOutlet weak var tapbutton1: UIButton!
     @IBOutlet weak var tapbutton2: UIButton!
     @IBOutlet weak var tapbutton3: UIButton!
@@ -127,6 +132,7 @@ class BViewController: UIViewController {
         b4pressed = false
         
         FBSDKAppEvents.logEvent("Screen 2")
+        focusarea = "-"
         // Do any additional setup after loading the view.
     }
 

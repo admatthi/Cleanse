@@ -10,6 +10,13 @@ import UIKit
 import FBSDKCoreKit
 
 var ages = [String]()
+var focusarea = String()
+var activitylevel = String()
+var time = String()
+var heightft = String()
+var heightin = String()
+var weight = String()
+var goalweight = String()
 
 class AViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var button1: UIButton!

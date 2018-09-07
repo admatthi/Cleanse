@@ -12,6 +12,9 @@ var workoutimages = [UIImage]()
 var workoutnames = [String]()
 var workoutdays = [String]()
 
+
+var lightblue = UIColor(red:0.76, green:0.78, blue:0.84, alpha:1.0)
+
 class WorkoutViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBAction func tapBack(_ sender: Any) {
@@ -23,10 +26,50 @@ class WorkoutViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loaddictionaries()
+        
+        if workoutdays.count > 0 {
+            
+            queryforlastcompleted()
+            
+        } else {
+            
+            workoutdays.removeAll()
+            workoutnames.removeAll()
+            workoutimages.removeAll()
+            loaddictionaries()
+            queryforlastcompleted()
+        }
         // Do any additional setup after loading the view.
     }
+    
+    func queryforlastcompleted() {
+        
+        ref?.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            var value = snapshot.value as? NSDictionary
+            
+            if var activityvalue = value?["Last Completed"] as? String {
+                
+                self.lastcompleted = Int(activityvalue)!
+                self.collectionView.scrollToItem(at:IndexPath(item: self.lastcompleted, section: 0), at: .right, animated: false)
+                
+                self.collectionView.reloadData()
 
+            } else {
+                
+                self.lastcompleted = 0
+                
+                self.collectionView.scrollToItem(at:IndexPath(item: self.lastcompleted, section: 0), at: .right, animated: false)
+                
+                self.collectionView.reloadData()
+
+            }
+            
+        })
+        
+    }
+
+    var lastcompleted = Int()
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,142 +77,138 @@ class WorkoutViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func loaddictionaries() {
         
-        workoutdays.append("Day 1")
-        workoutdays.append("Day 2")
-        workoutdays.append("Day 3")
-        workoutdays.append("Day 4")
-        workoutdays.append("Day 5")
-        workoutdays.append("Day 6")
-        workoutdays.append("Day 7")
-        workoutdays.append("Day 8")
-        workoutdays.append("Day 9")
-        workoutdays.append("Day 10")
-        workoutdays.append("Day 11")
-        workoutdays.append("Day 12")
-        workoutdays.append("Day 13")
-        workoutdays.append("Day 14")
-        workoutdays.append("Day 15")
-        workoutdays.append("Day 16")
-        workoutdays.append("Day 17")
-        workoutdays.append("Day 18")
-        workoutdays.append("Day 19")
-        workoutdays.append("Day 20")
-        workoutdays.append("Day 21")
-        workoutdays.append("Day 22")
-        workoutdays.append("Day 23")
-        workoutdays.append("Day 24")
-        workoutdays.append("Day 25")
-        workoutdays.append("Day 26")
-        workoutdays.append("Day 27")
-        workoutdays.append("Day 28")
+        workoutdays.append("1")
+        workoutdays.append("2")
+        workoutdays.append("3")
+        workoutdays.append("4")
+        workoutdays.append("5")
+        workoutdays.append("6")
+        workoutdays.append("7")
+        workoutdays.append("8")
+        workoutdays.append("9")
+        workoutdays.append("10")
+        workoutdays.append("11")
+        workoutdays.append("12")
+        workoutdays.append("13")
+        workoutdays.append("14")
+        workoutdays.append("15")
+        workoutdays.append("16")
+        workoutdays.append("17")
+        workoutdays.append("18")
+        workoutdays.append("19")
+        workoutdays.append("20")
+        workoutdays.append("21")
+        workoutdays.append("22")
+        workoutdays.append("23")
+        workoutdays.append("24")
+        workoutdays.append("25")
+        workoutdays.append("26")
+        workoutdays.append("27")
+        workoutdays.append("28")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
         workoutnames.append("Legs")
         workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
+        workoutnames.append("Back")
         workoutnames.append("Rest")
-        workoutnames.append("Legs")
-        workoutnames.append("Arms & Abs")
-        workoutnames.append("Full Body")
-        workoutnames.append("Rest")
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
-        workoutimages.append(UIImage(named: "Legs")!)
-        workoutimages.append(UIImage(named: "Arms & Abs")!)
-        workoutimages.append(UIImage(named: "Full Body")!)
-        workoutimages.append(UIImage(named: "Rest")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
+        workoutimages.append(UIImage(named: "Squat1")!)
+        workoutimages.append(UIImage(named: "Triple Tricep Push Up1")!)
+        workoutimages.append(UIImage(named: "Kneeling Oblique Crunch1")!)
+        workoutimages.append(UIImage(named: "Spine Stretch2")!)
         collectionView.reloadData()
     }
     /*
@@ -189,6 +228,7 @@ class WorkoutViewController: UIViewController, UICollectionViewDelegate, UIColle
         return workoutdays.count
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
@@ -197,7 +237,24 @@ class WorkoutViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         
         selectedtitle = workoutnames[indexPath.row]
-        self.performSegue(withIdentifier: "WorkoutToExercises", sender: self)
+        selectedday = workoutdays[indexPath.row]
+
+        if workoutnames[indexPath.row] == "Rest" {
+            
+            selectedtitle = workoutnames[indexPath.row]
+            selectedday = workoutdays[indexPath.row]
+            
+            ref?.child(uid).updateChildValues(["Last Completed" : "\(selectedday)"])
+            
+            queryforlastcompleted()
+            
+        } else {
+            
+            
+            print(selectedday)
+            self.performSegue(withIdentifier: "WorkoutToExercises", sender: self)
+
+        }
 
     }
     
@@ -207,10 +264,31 @@ class WorkoutViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         cell.workoutimage.clipsToBounds = true
         cell.workoutimage.layer.cornerRadius   = 10.0
+        cell.daynumber.text = "Day \(workoutdays[indexPath.row])"
+        cell.layer.cornerRadius = 10.0
+        cell.clipsToBounds = true
 
+        cell.backgroundColor = greyl
+        
+        if indexPath.row > lastcompleted {
+            
+            cell.buttonimage.image = UIImage(named: "DarkBlueButton")
+            cell.isUserInteractionEnabled = false
+            cell.label2.text = "WORKOUT LOCKED"
+            cell.daynumber.textColor = lightblue
+            cell.daytitle.textColor = lightblue
+            
+        } else {
+            
+    cell.buttonimage.image = UIImage(named: "GreenBlueButton")
+    cell.isUserInteractionEnabled = true
+    cell.label2.text = "START WORKOUT"
+            cell.daynumber.textColor = .black
+            cell.daytitle.textColor = .black
+        }
         if workoutdays.count > 0 {
             
-            cell.daynumber.text = workoutdays[indexPath.row]
+            cell.daynumber.text = "Day \(workoutdays[indexPath.row])"
             cell.daytitle.text = workoutnames[indexPath.row]
             cell.workoutimage.image = workoutimages[indexPath.row]
             
@@ -222,4 +300,8 @@ class WorkoutViewController: UIViewController, UICollectionViewDelegate, UIColle
 }
 
 var selectedtitle = String()
+
+var selectedday = String()
+
+var greyl = UIColor(red:0.96, green:0.96, blue:0.97, alpha:1.0)
 

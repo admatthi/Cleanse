@@ -10,6 +10,7 @@ import UIKit
 
 class ExerciseTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var greenbackgorund: UILabel!
     @IBOutlet weak var repstitle: UILabel!
     @IBOutlet weak var exercisetitle: UILabel!
     @IBOutlet weak var circuitminute: UILabel!
@@ -18,6 +19,7 @@ class ExerciseTableViewCell: UITableViewCell {
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image1: UIImageView!
     
+    @IBOutlet weak var bluelabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

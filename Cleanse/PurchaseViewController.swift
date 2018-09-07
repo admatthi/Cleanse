@@ -136,9 +136,8 @@ class PurchaseViewController: UIViewController {
             
         }
         
-        
-        
     }
+    
     @IBAction func tapButton3(_ sender: Any) {
         
         //        generator.impactOccurred()
@@ -155,6 +154,12 @@ class PurchaseViewController: UIViewController {
             
             
         }
+        
+//        DispatchQueue.main.async {
+//            
+//            self.performSegue(withIdentifier: "PurchaseToLogin", sender: self)
+//            
+//        }
         
     }
     
