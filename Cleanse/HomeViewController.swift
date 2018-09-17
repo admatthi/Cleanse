@@ -19,6 +19,56 @@ var meals = [String]()
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var d1: UIButton!
+    @IBOutlet weak var d2: UIButton!
+    @IBOutlet weak var d3: UIButton!
+    @IBOutlet weak var d4: UIButton!
+    @IBOutlet weak var d5: UIButton!
+    @IBOutlet weak var d6: UIButton!
+    @IBOutlet weak var d7: UIButton!
+
+    @IBAction func D1(_ sender: Any) {
+        
+        dayInWeek = "Monday"
+        loadrelevantday()
+    }
+    @IBAction func D2(_ sender: Any) {
+        
+        dayInWeek = "Tuesday"
+        loadrelevantday()
+        
+    }
+    @IBAction func D3(_ sender: Any) {
+        
+        dayInWeek = "Wednesday"
+        loadrelevantday()
+
+    }
+    @IBAction func D4(_ sender: Any) {
+        
+        dayInWeek = "Thursday"
+        loadrelevantday()
+
+    }
+    @IBAction func D5(_ sender: Any) {
+        
+        dayInWeek = "Friday"
+        loadrelevantday()
+
+    }
+    @IBAction func D6(_ sender: Any) {
+        
+        dayInWeek = "Saturday"
+        loadrelevantday()
+
+    }
+    @IBAction func D7(_ sender: Any) {
+        
+        dayInWeek = "Sunday"
+       loadrelevantday()
+        
+    }
+    
     @IBOutlet weak var tableVie: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +98,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             counter = 1
             loadrelevantday()
             uid = (Auth.auth().currentUser?.uid)!
+            
 //            let date = Date()
 //            let calendar = Calendar.current
 //            let dateFormatter = DateFormatter()
@@ -65,7 +116,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             formatter.dateFormat = "EEEE"
             dayInWeek = formatter.string(from: date)
             
-            dayofweek.text = dayInWeek
+            let startWeek = Date().startOfWeek
+            let endWeek = Date().endOfWeek
+            var dateFormat1 = DateFormatter()
+            dateFormat1.dateFormat = "MM/dd"
+            let startWeek2 = dateFormat1.string(from: startWeek!)
+            var dateFormat12 = DateFormatter()
+            dateFormat12.dateFormat = "MM/dd"
+            let endWeek2 = dateFormat12.string(from: endWeek!)
+            print(startWeek2)
+            print(endWeek2)
+            dayofweek.text = "\(startWeek2) - \(endWeek2)"
             
             if meals.count > 0 {
                 
@@ -95,6 +156,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Quinoa Pilaf with Chicken")
         foodimages.append(UIImage(named: "Quinoa Pilaf with Chicken")!)
         tableVie.reloadData()
+        d7.setTitleColor(.white, for: .normal)
+        d7.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
+        
+        
     }
     
     func loadmonday() {
@@ -109,6 +186,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Beef & Tomato Stew with Couscous")
         foodimages.append(UIImage(named: "Beef & Tomato Stew with Couscous")!)
         tableVie.reloadData()
+        d1.setTitleColor(.white, for: .normal)
+        d1.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
     }
     
     func loadtuesday() {
@@ -124,6 +215,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Sweet Potato & Black Bean Enchilada")
         foodimages.append(UIImage(named: "Sweet Potato & Black Bean Enchilada")!)
         tableVie.reloadData()
+        d2.setTitleColor(.white, for: .normal)
+        d2.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
     }
     
     func loadwednesday() {
@@ -139,6 +244,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Salmona Nicoise Salad")
         foodimages.append(UIImage(named: "Salmon Nicoise Salad")!)
         tableVie.reloadData()
+        d3.setTitleColor(.white, for: .normal)
+        d3.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
     }
     
     func loadthursday() {
@@ -154,6 +273,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Homemade Beef Burger")
         foodimages.append(UIImage(named: "Homemade Beef Burger")!)
         tableVie.reloadData()
+        d4.setTitleColor(.white, for: .normal)
+        d4.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
     }
     
     func loadfriday() {
@@ -169,6 +302,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Sweet & Sour Chicken with Rice")
         foodimages.append(UIImage(named: "Sweet & Sour Chicken with Rice")!)
         tableVie.reloadData()
+        d5.setTitleColor(.white, for: .normal)
+        d5.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
+        
     }
     
     func loadsaturday() {
@@ -185,6 +333,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         foodimages.append(UIImage(named: "Lemon & Herb Infused Fish with Vegetables")!)
 
         tableVie.reloadData()
+        
+        d6.setTitleColor(.white, for: .normal)
+        d6.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
     }
     
     func loadrelevantday() {
@@ -460,3 +623,16 @@ func getDayOfWeek(_ today:String) -> Int? {
     return weekDay
 }
 
+extension Date {
+    var startOfWeek: Date? {
+        let gregorian = Calendar(identifier: .gregorian)
+        guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
+        return gregorian.date(byAdding: .day, value: 1, to: sunday)
+    }
+    
+    var endOfWeek: Date? {
+        let gregorian = Calendar(identifier: .gregorian)
+        guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
+        return gregorian.date(byAdding: .day, value: 7, to: sunday)
+    }
+}

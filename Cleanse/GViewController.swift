@@ -9,41 +9,119 @@
 import UIKit
 import FBSDKCoreKit
 
-class GViewController: UIViewController {
+var inches = String()
+var feet = String()
+var current = String()
+var goal = String()
 
-    @IBAction func tapStarted(_ sender: Any) {
-        
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
-        
-    }
-    @IBOutlet weak var slider2: UISlider!
-    @IBOutlet weak var slider1: UISlider!
-    @IBAction func tapSlider(_ sender: Any) {
-        
-        var test = Int(slider1.value)
-        tflabel.text = "\(test) feet"
-        heightft = "\(test) feet"
-    }
-    @IBOutlet weak var tflabel: UILabel!
+class GViewController: UIViewController, UITextFieldDelegate    {
+
+    @IBOutlet weak var targetweighttf: UITextField!
     
-    @IBOutlet weak var tflabel2: UILabel!
-    @IBAction func tapSlider2(_ sender: Any) {
+    @IBAction func tapNext(_ sender: Any) {
         
-        var test = Int(slider2.value)
-        tflabel2.text = "\(test) inches"
-        heightin = "\(test) inches"
+        if intf.text != "" {
+            
+            inches = intf.text!
+            
+        }
+        
+        if feettf.text != "" {
+            
+            feet = feettf.text!
+            
+        }
+        
+        if targetweighttf.text != "" {
+            
+            goal = targetweighttf.text!
+            
+        }
+        
+        if currentweighttf.text != "" {
+            
+            current = currentweighttf.text!
+            
+        }
+        
+        self.performSegue(withIdentifier: "FToPurchase", sender: self)
     }
+    @IBOutlet weak var currentweighttf: UITextField!
+    @IBOutlet weak var intf: UITextField!
+    @IBOutlet weak var feettf: UITextField!
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        self.view.endEditing(true)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        FBSDKAppEvents.logEvent("Screen 5")
-        // Do any additional setup after loading the view.
         
-        heightft = "-"
-        heightin = "-"
+        // Do any additional setup after loading the view.
+                
+        intf.delegate = self
+        feettf.delegate = self
+        currentweighttf.delegate = self
+        targetweighttf.delegate = self
+        currentweighttf.becomeFirstResponder()
+        currentweighttf.becomeFirstResponder()
+        intf.becomeFirstResponder()
+        feettf.becomeFirstResponder()
+        
+        if inches != "" {
+            
+            intf.text = inches
+        }
+        
+        if feet != "" {
+            
+            feettf.text = feet
+        }
+        
+        if goal != "" {
+            
+            targetweighttf.text = goal
+        }
+        
+        if current != "" {
+            
+            currentweighttf.text = current
+        }
+        
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if intf.text != "" {
+        
+            inches = intf.text!
+            
+        }
+        
+        if feettf.text != "" {
+            
+            feet = feettf.text!
 
+        }
+        
+        if targetweighttf.text != "" {
+            
+            goal = targetweighttf.text!
+
+        }
+        
+        if currentweighttf.text != "" {
+            
+            current = currentweighttf.text!
+
+        }
+        
+        return true
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

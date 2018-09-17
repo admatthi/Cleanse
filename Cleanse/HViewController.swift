@@ -39,7 +39,7 @@ class HViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        FBSDKAppEvents.logEvent("Screen 6")
+        FBSDKAppEvents.logEvent("Profile")
         // Do any additional setup after loading the view.
         weight = "-"
         goalweight = "-"

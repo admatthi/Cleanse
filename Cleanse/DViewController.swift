@@ -9,99 +9,157 @@
 import UIKit
 import FBSDKCoreKit
 
+var b1pressed1 = Bool()
+var b2pressed2 = Bool()
+var b3pressed3 = Bool()
+var b4pressed4 = Bool()
+
 class DViewController: UIViewController {
-    var b1pressed = Bool()
-    var b2pressed = Bool()
-    var b3pressed = Bool()
-    var b4pressed = Bool()
+
     
     @IBOutlet weak var tapbutton1: UIButton!
     @IBOutlet weak var tapbutton2: UIButton!
     @IBOutlet weak var tapbutton3: UIButton!
     @IBOutlet weak var tapbutton4: UIButton!
     
+    @IBOutlet weak var title1: UILabel!
+    @IBOutlet weak var title2: UILabel!
+    @IBOutlet weak var title3: UILabel!
+    @IBOutlet weak var title4: UILabel!
+
+    
     @IBAction func tapB1(_ sender: Any) {
         
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
+    
         
-//        if b1pressed {
-//            
-//            tapbutton1.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
-//            
-//            b1pressed = false
-//            
-//        } else {
-//            
-//            tapbutton1.setBackgroundImage(UIImage(named: "WhiteCircle"), for: .normal)
-//            
-//            b1pressed = true
-//        }
-    }
-    @IBAction func tapB2(_ sender: Any) {
-        
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
-        
-//        if b2pressed {
-//
-//            tapbutton2.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
-//
-//            b2pressed = false
-//
-//        } else {
-//
-//            tapbutton2.setBackgroundImage(UIImage(named: "WhiteCircle"), for: .normal)
-//
-//            b2pressed = true
-//        }
-    }
-    @IBAction func tapB3(_ sender: Any) {
-        
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
-        
-//        if b3pressed {
-//
-//            tapbutton3.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
-//
-//            b3pressed = false
-//
-//        } else {
-//
-//            tapbutton3.setBackgroundImage(UIImage(named: "WhiteCircle"), for: .normal)
-//
-//            b3pressed = true
-//        }
-    }
-    @IBAction func tapB4(_ sender: Any) {
-        
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
-        
-        if b4pressed {
+        if b1pressed1 {
             
-            tapbutton4.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
+            tapbutton1.setBackgroundImage(UIImage(named: "BLUEOUTLINERECETANGLE"), for: .normal)
+                title1.textColor = lightblue
+            b1pressed1 = false
+            icon1.image = UIImage(named: "Chicken")
             
-            b4pressed = false
             
         } else {
             
-            tapbutton4.setBackgroundImage(UIImage(named: "WhiteCircle"), for: .normal)
+            tapbutton1.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+                title1.textColor = .white
+            icon1.image = UIImage(named: "Chicken Copy")
             
-            b4pressed = true
+            
+            b1pressed1 = true
         }
     }
+    @IBAction func tapB2(_ sender: Any) {
+        
+    
+        if b2pressed2 {
+
+            tapbutton2.setBackgroundImage(UIImage(named: "BLUEOUTLINERECETANGLE"), for: .normal)
+            title2.textColor = lightblue
+            b2pressed2 = false
+            icon2.image = UIImage(named: "Beef")
+            
+            
+        } else {
+            
+            tapbutton2.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title2.textColor = .white
+            icon2.image = UIImage(named: "Beef Copy")
+            
+            b2pressed2 = true
+        }
+    }
+    @IBAction func tapB3(_ sender: Any) {
+  
+        
+        if b3pressed3 {
+
+            tapbutton3.setBackgroundImage(UIImage(named: "BLUEOUTLINERECETANGLE"), for: .normal)
+            title3.textColor = lightblue
+            b3pressed3 = false
+            icon3.image = UIImage(named: "Fish")
+            
+            
+        } else {
+            
+            tapbutton3.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title3.textColor = .white
+
+            icon3.image = UIImage(named: "Fish Copy")
+            
+            b3pressed3 = true
+        }
+    }
+    @IBAction func tapB4(_ sender: Any) {
+        
+
+        if b4pressed4 {
+            
+            tapbutton4.setBackgroundImage(UIImage(named: "BLUEOUTLINERECETANGLE"), for: .normal)
+            title4.textColor = lightblue
+            b4pressed4 = false
+            
+        } else {
+            
+            tapbutton4.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title4.textColor = .white
+            
+            b4pressed4 = true
+        }
+    }
+    
+    
+    @IBOutlet weak var icon1: UIImageView!
+    @IBOutlet weak var icon2: UIImageView!
+
+    @IBOutlet weak var icon3: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        b1pressed = false
-        b2pressed = false
-        b3pressed = false
-        b4pressed = false
+        if b1pressed1 {
+            
+            tapbutton1.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title1.textColor = .white
+            icon1.image = UIImage(named: "Chicken Copy")
+            
+            
+        } else {
+            
+          
+            
+        }
+        
+        if b3pressed3 {
+            
+            tapbutton3.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title3.textColor = .white
+            
+            icon3.image = UIImage(named: "Fish Copy")
+            
+            
+        } else {
+            
+           
+            
+        }
+        
+        if b2pressed2 {
+            
+            tapbutton2.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title2.textColor = .white
+            icon2.image = UIImage(named: "Beef Copy")
+            
+            
+        } else {
+            
+        
+            
+        }
         time = "-"
 
-        FBSDKAppEvents.logEvent("Screen 4")
+        FBSDKAppEvents.logEvent("Protein")
         // Do any additional setup after loading the view.
     }
 

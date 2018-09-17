@@ -9,116 +9,162 @@
 import UIKit
 import FBSDKCoreKit
 
-class EViewController: UIViewController {
+var b1pressed21 = Bool()
+var b2pressed22 = Bool()
+var b3pressed23 = Bool()
+var b4pressed24 = Bool()
 
-    var b1pressed = Bool()
-    var b2pressed = Bool()
-    var b3pressed = Bool()
-    var b4pressed = Bool()
+class EViewController: UIViewController {
+  
     
     @IBOutlet weak var tapbutton1: UIButton!
     @IBOutlet weak var tapbutton2: UIButton!
     @IBOutlet weak var tapbutton3: UIButton!
     @IBOutlet weak var tapbutton4: UIButton!
     
+    @IBOutlet weak var title1: UILabel!
+    @IBOutlet weak var title2: UILabel!
+    @IBOutlet weak var title3: UILabel!
+    @IBOutlet weak var title4: UILabel!
+    
+    
     @IBAction func tapB1(_ sender: Any) {
         
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
-        
-//        if b1pressed {
-//
-//            tapbutton1.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
-//
-//            b1pressed = false
-//
-//        } else {
-//
-//            tapbutton1.setBackgroundImage(UIImage(named: "WhiteCircle"), for: .normal)
-//
-//            b1pressed = true
-//        }
+      
+        if b1pressed21 {
+            
+            tapbutton1.setBackgroundImage(UIImage(named: "BLUEOUTLINERECETANGLE"), for: .normal)
+            title1.textColor = lightblue
+            b1pressed21 = false
+            icon1.image = UIImage(named: "Rice")
+
+        } else {
+            
+            tapbutton1.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title1.textColor = .white
+            icon1.image = UIImage(named: "Rice Copy")
+
+            b1pressed21 = true
+        }
     }
     @IBAction func tapB2(_ sender: Any) {
+    
         
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
-        
-//        if b2pressed {
-//
-//            tapbutton2.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
-//
-//            b2pressed = false
-//
-//        } else {
-//
-//            tapbutton2.setBackgroundImage(UIImage(named: "WhiteCircle"), for: .normal)
-//
-//            b2pressed = true
-//        }
+        if b2pressed22 {
+            
+            tapbutton2.setBackgroundImage(UIImage(named: "BLUEOUTLINERECETANGLE"), for: .normal)
+            title2.textColor = lightblue
+            b2pressed22 = false
+            icon2.image = UIImage(named: "Beans")
+
+        } else {
+            
+            tapbutton2.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title2.textColor = .white
+            icon2.image = UIImage(named: "Beans Copy")
+
+            b2pressed22 = true
+        }
     }
     @IBAction func tapB3(_ sender: Any) {
+    
         
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
-        
-//        if b3pressed {
-//            
-//            tapbutton3.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
-//            
-//            b3pressed = false
-//            
-//        } else {
-//            
-//            tapbutton3.setBackgroundImage(UIImage(named: "WhiteCircle"), for: .normal)
-//            
-//            b3pressed = true
-//        }
-    }
-    @IBAction func tapB4(_ sender: Any) {
-        
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
-        
-        if b4pressed {
+        if b3pressed23 {
             
-            tapbutton4.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
-            
-            b4pressed = false
+            tapbutton3.setBackgroundImage(UIImage(named: "BLUEOUTLINERECETANGLE"), for: .normal)
+            title3.textColor = lightblue
+            b3pressed23 = false
+            icon3.image = UIImage(named: "Oat")
+
             
         } else {
             
-            tapbutton4.setBackgroundImage(UIImage(named: "WhiteCircle"), for: .normal)
-            
-            b4pressed = true
+            tapbutton3.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title3.textColor = .white
+            icon3.image = UIImage(named: "Oat Copy")
+
+            b3pressed23 = true
         }
     }
+    @IBAction func tapB4(_ sender: Any) {
+        
+   
+        if b4pressed24 {
+            
+            tapbutton4.setBackgroundImage(UIImage(named: "BLUEOUTLINERECETANGLE"), for: .normal)
+            title4.textColor = lightblue
+            b4pressed24 = false
+            
+        } else {
+            
+            tapbutton4.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title4.textColor = .white
+            
+            b4pressed24 = true
+        }
+    }
+    
+    @IBOutlet weak var icon1: UIImageView!
+    @IBOutlet weak var icon2: UIImageView!
+    
+    @IBOutlet weak var icon3: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        b1pressed = false
-        b2pressed = false
-        b3pressed = false
-        b4pressed = false
+        if b1pressed21 {
+            
+            tapbutton1.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title1.textColor = .white
+            icon1.image = UIImage(named: "Rice Copy")
+            
+        } else {
+            
+           
+        }
         
-        FBSDKAppEvents.logEvent("Screen 6")
+        if b2pressed22 {
+            
+            tapbutton2.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title2.textColor = .white
+            icon2.image = UIImage(named: "Beans Copy")
+            
+        } else {
+            
+            
+        }
+        
+        if b3pressed23 {
+            
+            tapbutton3.setBackgroundImage(UIImage(named: "GreenShit-1"), for: .normal)
+            title3.textColor = .white
+            icon3.image = UIImage(named: "Oat Copy")
+            
+        } else {
+            
+            
+        }
+   
+        time = "-"
+        
+        FBSDKAppEvents.logEvent("Carbs")
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

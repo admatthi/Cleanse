@@ -25,13 +25,13 @@ class InformationViewController: UIViewController {
 
     @IBAction func tapInformation(_ sender: Any) {
         
-        FBSDKAppEvents.logEvent("12MonthTrialPressedInformation")
+        FBSDKAppEvents.logEvent("Monthly Pressed Information")
         
         //        purchase(purchase: sevendayfreetrial)
         
         purchases?.entitlements { entitlements in
             guard let pro = entitlements?["Subscriptions"] else { return }
-            guard let monthly = pro.offerings["Yearly"] else { return }
+            guard let monthly = pro.offerings["Monthly"] else { return }
             guard let product = monthly.activeProduct else { return }
             self.purchases?.makePurchase(product)
             

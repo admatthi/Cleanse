@@ -78,7 +78,7 @@ class AViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         addagestopickerView()
         
         button1.alpha = 0
-        FBSDKAppEvents.logEvent("Screen 1")
+        FBSDKAppEvents.logEvent("Age")
 
         // Do any additional setup after loading the view.
     }
@@ -104,13 +104,13 @@ class AViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         if indexPath.row == 0 {
             
             cell.salesimage.image = UIImage(named: "Arms Copy 3")
-            cell.salestext.text = "Welcome dear! Join us today and get the weight loss meal plan perfect for you"
+            cell.salestext.text = "Welcome dear! Join us today and get EVERYTHING you need to lose weight"
         } else {
             
             if indexPath.row == 1 {
                 
                 cell.salesimage.image = UIImage(named: "Arms Copy")
-                cell.salestext.text = "You will certainly start losing weight by following our recommendations"
+                cell.salestext.text = "Take our short quiz to find out which plan will work the best for your YOUR specific body type"
             } else {
                 
                 if indexPath.row == 2 {

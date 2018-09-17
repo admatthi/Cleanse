@@ -107,7 +107,7 @@ class PurchaseViewController: UIViewController {
         
         //        generator.impactOccurred()
         
-        FBSDKAppEvents.logEvent("YearPressed")
+        FBSDKAppEvents.logEvent("Lifetime Pressed")
         
 //        purchase(purchase: onetimepurchase)
         
@@ -123,13 +123,15 @@ class PurchaseViewController: UIViewController {
     }
     @IBAction func tapButton2(_ sender: Any) {
         
-        FBSDKAppEvents.logEvent("MonthlyPressed")
+        FBSDKAppEvents.logEvent("Yearly Pressed")
         
 //        purchase(purchase: threedaytrial)
         
+      
+        
         purchases?.entitlements { entitlements in
             guard let pro = entitlements?["Subscriptions"] else { return }
-            guard let monthly = pro.offerings["Monthly"] else { return }
+            guard let monthly = pro.offerings["Yearly"] else { return }
             guard let product = monthly.activeProduct else { return }
             self.purchases?.makePurchase(product)
             
@@ -142,18 +144,19 @@ class PurchaseViewController: UIViewController {
         
         //        generator.impactOccurred()
         
-        FBSDKAppEvents.logEvent("12MonthTrialPressed")
-        
-//        purchase(purchase: sevendayfreetrial)
+        FBSDKAppEvents.logEvent("Monthly Pressed")
         
         purchases?.entitlements { entitlements in
             guard let pro = entitlements?["Subscriptions"] else { return }
-            guard let monthly = pro.offerings["Yearly"] else { return }
+            guard let monthly = pro.offerings["Monthly"] else { return }
             guard let product = monthly.activeProduct else { return }
             self.purchases?.makePurchase(product)
             
             
         }
+//        purchase(purchase: sevendayfreetrial)
+        
+  
         
 //        DispatchQueue.main.async {
 //            
@@ -401,7 +404,7 @@ class PurchaseViewController: UIViewController {
         let year = calendar.component(.year, from: date)
         let month = calendar.component(.month, from: date)
         let day = calendar.component(.day, from: date)
-        enddate.text = "Ends \(todaysdate), \(day) 2018"
+        enddate.text = "Only \(todaysdate), \(day) 2018"
         
         self.becomeFirstResponder() // To get shake gesture
         

@@ -27,6 +27,8 @@ class BViewController: UIViewController {
         
         mainimage.image = UIImage(named: "LegsPhoto")
         focusarea = "Thick Legs & Thighs"
+        
+        
     }
     @IBOutlet weak var tapthighs: UIButton!
     @IBAction func taparms(_ sender: Any) {
@@ -89,8 +91,7 @@ class BViewController: UIViewController {
     }
     @IBAction func tapB3(_ sender: Any) {
         
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
+  
         
 //        if b3pressed {
 //            
@@ -107,9 +108,7 @@ class BViewController: UIViewController {
     }
     @IBAction func tapB4(_ sender: Any) {
         
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
-        
+
         if b4pressed {
             
             tapbutton4.setBackgroundImage(UIImage(named: "DarkOutline"), for: .normal)
@@ -131,8 +130,48 @@ class BViewController: UIViewController {
         b3pressed = false
         b4pressed = false
         
-        FBSDKAppEvents.logEvent("Screen 2")
-        focusarea = "-"
+        FBSDKAppEvents.logEvent("Problem Area")
+        
+        if focusarea == "" {
+            
+            focusarea = "-"
+
+            
+        } else {
+            
+            if focusarea == "Thick Legs & Thighs" {
+                
+                mainimage.image = UIImage(named: "LegsPhoto")
+
+            } else {
+                
+                if focusarea == "Belly Fat" {
+                    
+                    mainimage.image = UIImage(named: "Belly")
+
+                } else {
+                    
+                    if focusarea == "Saggy Breasts" {
+                        
+                        mainimage.image = UIImage(named: "Chest")
+                        
+                    } else {
+                        
+                        if focusarea == "Flabby Arms" {
+                            
+                            mainimage.image = UIImage(named: "ArmsPhoto")
+                            
+                        } else {
+                            
+                            
+                        }
+                        
+                    }
+                    
+                }
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
 
