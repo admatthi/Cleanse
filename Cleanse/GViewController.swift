@@ -65,9 +65,7 @@ class GViewController: UIViewController, UITextFieldDelegate    {
         feettf.delegate = self
         currentweighttf.delegate = self
         targetweighttf.delegate = self
-        currentweighttf.becomeFirstResponder()
-        currentweighttf.becomeFirstResponder()
-        intf.becomeFirstResponder()
+
         feettf.becomeFirstResponder()
         
         if inches != "" {

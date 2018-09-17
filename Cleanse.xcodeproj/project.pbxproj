@@ -19,6 +19,7 @@
 		9D2B8C272128B7D300188DC5 /* ApprovedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */; };
 		9D2B8C292128B7E300188DC5 /* ApprovedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */; };
 		9D33AA6C21503C7C00F64379 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D33AA6B21503C7C00F64379 /* CompletedViewController.swift */; };
+		9D33AA6E215056C600F64379 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D33AA6D215056C600F64379 /* ProfileViewController.swift */; };
 		9D3E1F13211B3C7C00CA9E57 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3E1F12211B3C7C00CA9E57 /* StoreKit.framework */; };
 		9D43C5E4211A645A00659451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C5E3211A645A00659451 /* AppDelegate.swift */; };
 		9D43C5E6211A645A00659451 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C5E5211A645A00659451 /* ViewController.swift */; };
@@ -98,6 +99,7 @@
 		9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovedTableViewCell.swift; sourceTree = "<group>"; };
 		9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovedViewController.swift; sourceTree = "<group>"; };
 		9D33AA6B21503C7C00F64379 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
+		9D33AA6D215056C600F64379 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9D3E1F12211B3C7C00CA9E57 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9D43C5E0211A645A00659451 /* Cleanse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cleanse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D43C5E3211A645A00659451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				9D191ECF213B4BCF00B91985 /* ExerciseViewController.swift */,
 				9D191ED1213B4BE700B91985 /* ExerciseTableViewCell.swift */,
 				9D33AA6B21503C7C00F64379 /* CompletedViewController.swift */,
+				9D33AA6D215056C600F64379 /* ProfileViewController.swift */,
 				9D43C5EA211A645D00659451 /* Assets.xcassets */,
 				9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */,
 				9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */,
@@ -560,6 +563,7 @@
 				9D33AA6C21503C7C00F64379 /* CompletedViewController.swift in Sources */,
 				9D43C648211B2B1400659451 /* BillingViewController.swift in Sources */,
 				9D43C646211B2B0800659451 /* SettingsViewController.swift in Sources */,
+				9D33AA6E215056C600F64379 /* ProfileViewController.swift in Sources */,
 				9D43C638211A78E900659451 /* FViewController.swift in Sources */,
 				9D191ECC213B4B3A00B91985 /* WorkoutViewController.swift in Sources */,
 				9D43C5E4211A645A00659451 /* AppDelegate.swift in Sources */,

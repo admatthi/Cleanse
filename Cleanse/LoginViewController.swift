@@ -97,7 +97,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 newuser = false
                 
-//                ref?.child(uid).updateChildValues(["Goal Weight" : goalweight, "Weight" : weight, "Height Ft" : heightft, "Height In" : heightin, "Problem Area" : focusarea, "Time" : time])
+                ref?.child(uid).updateChildValues(["Goal Weight" : current, "Weight" : goal, "Height Ft" : feet, "Height In" : inches, "Problem Area" : focusarea, "Time" : time])
 //                
                 DispatchQueue.main.async {
                     
@@ -136,7 +136,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
                 } else {
         
-                    tapcreate.alpha = 0
+                    tapcreate.alpha = 1
                 }
 
     }
