@@ -245,8 +245,8 @@ class WorkoutViewController: UIViewController, UICollectionViewDelegate, UIColle
             selectedday = workoutdays[indexPath.row]
             
             ref?.child(uid).updateChildValues(["Last Completed" : "\(selectedday)"])
-            
-            queryforlastcompleted()
+                        
+            self.performSegue(withIdentifier: "RestToCompleted", sender: self)
             
         } else {
             

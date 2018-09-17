@@ -18,6 +18,7 @@
 		9D191ED2213B4BE700B91985 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D191ED1213B4BE700B91985 /* ExerciseTableViewCell.swift */; };
 		9D2B8C272128B7D300188DC5 /* ApprovedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */; };
 		9D2B8C292128B7E300188DC5 /* ApprovedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */; };
+		9D33AA6C21503C7C00F64379 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D33AA6B21503C7C00F64379 /* CompletedViewController.swift */; };
 		9D3E1F13211B3C7C00CA9E57 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3E1F12211B3C7C00CA9E57 /* StoreKit.framework */; };
 		9D43C5E4211A645A00659451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C5E3211A645A00659451 /* AppDelegate.swift */; };
 		9D43C5E6211A645A00659451 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C5E5211A645A00659451 /* ViewController.swift */; };
@@ -96,6 +97,7 @@
 		9D191ED1213B4BE700B91985 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovedTableViewCell.swift; sourceTree = "<group>"; };
 		9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovedViewController.swift; sourceTree = "<group>"; };
+		9D33AA6B21503C7C00F64379 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
 		9D3E1F12211B3C7C00CA9E57 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9D43C5E0211A645A00659451 /* Cleanse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cleanse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D43C5E3211A645A00659451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				9D191ECD213B4B5500B91985 /* WorkoutCollectionViewCell.swift */,
 				9D191ECF213B4BCF00B91985 /* ExerciseViewController.swift */,
 				9D191ED1213B4BE700B91985 /* ExerciseTableViewCell.swift */,
+				9D33AA6B21503C7C00F64379 /* CompletedViewController.swift */,
 				9D43C5EA211A645D00659451 /* Assets.xcassets */,
 				9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */,
 				9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */,
@@ -450,6 +453,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Cleanse/Pods-Cleanse-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Cheers/Cheers.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -462,6 +466,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cheers.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -552,6 +557,7 @@
 				9D43C640211A796A00659451 /* HViewController.swift in Sources */,
 				9D43C64A211B339F00659451 /* MealsTableViewCell.swift in Sources */,
 				9D43C63E211A790600659451 /* HomeViewController.swift in Sources */,
+				9D33AA6C21503C7C00F64379 /* CompletedViewController.swift in Sources */,
 				9D43C648211B2B1400659451 /* BillingViewController.swift in Sources */,
 				9D43C646211B2B0800659451 /* SettingsViewController.swift in Sources */,
 				9D43C638211A78E900659451 /* FViewController.swift in Sources */,

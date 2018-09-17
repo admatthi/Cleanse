@@ -29,46 +29,153 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBAction func D1(_ sender: Any) {
         
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         dayInWeek = "Monday"
         loadrelevantday()
+        d1.setTitleColor(.white, for: .normal)
+        d1.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
     }
     @IBAction func D2(_ sender: Any) {
-        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         dayInWeek = "Tuesday"
         loadrelevantday()
-        
+        d2.setTitleColor(.white, for: .normal)
+        d2.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
     }
-    @IBAction func D3(_ sender: Any) {
         
+    
+    @IBAction func D3(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         dayInWeek = "Wednesday"
         loadrelevantday()
+        d3.setTitleColor(.white, for: .normal)
+        d3.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
 
     }
     @IBAction func D4(_ sender: Any) {
-        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         dayInWeek = "Thursday"
         loadrelevantday()
+        d4.setTitleColor(.white, for: .normal)
+        d4.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
 
     }
     @IBAction func D5(_ sender: Any) {
-        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         dayInWeek = "Friday"
         loadrelevantday()
 
+        d5.setTitleColor(.white, for: .normal)
+        d5.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
     }
     @IBAction func D6(_ sender: Any) {
-        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         dayInWeek = "Saturday"
         loadrelevantday()
-
+        d6.setTitleColor(.white, for: .normal)
+        d6.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
+        d7.setTitleColor(lightblue, for: .normal)
+        d7.setBackgroundImage(nil, for: .normal)
     }
     @IBAction func D7(_ sender: Any) {
-        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         dayInWeek = "Sunday"
        loadrelevantday()
         
+        d7.setTitleColor(.white, for: .normal)
+        d7.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+        d2.setTitleColor(lightblue, for: .normal)
+        d2.setBackgroundImage(nil, for: .normal)
+        d3.setTitleColor(lightblue, for: .normal)
+        d3.setBackgroundImage(nil, for: .normal)
+        d4.setTitleColor(lightblue, for: .normal)
+        d4.setBackgroundImage(nil, for: .normal)
+        d5.setTitleColor(lightblue, for: .normal)
+        d5.setBackgroundImage(nil, for: .normal)
+        d6.setTitleColor(lightblue, for: .normal)
+        d6.setBackgroundImage(nil, for: .normal)
+        d1.setTitleColor(lightblue, for: .normal)
+        d1.setBackgroundImage(nil, for: .normal)
     }
-    
+    var startdate = String()
+    var enddate = String()
     @IBOutlet weak var tableVie: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,14 +226,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let startWeek = Date().startOfWeek
             let endWeek = Date().endOfWeek
             var dateFormat1 = DateFormatter()
-            dateFormat1.dateFormat = "MM/dd"
-            let startWeek2 = dateFormat1.string(from: startWeek!)
+            dateFormat1.dateFormat = "MMM d"
+            var startWeek2 = dateFormat1.string(from: startWeek!)
             var dateFormat12 = DateFormatter()
-            dateFormat12.dateFormat = "MM/dd"
-            let endWeek2 = dateFormat12.string(from: endWeek!)
+            dateFormat12.dateFormat = "MMM d"
+            var endWeek2 = dateFormat12.string(from: endWeek!)
             print(startWeek2)
             print(endWeek2)
-            dayofweek.text = "\(startWeek2) - \(endWeek2)"
+            startdate = startWeek2
+            enddate = endWeek2
+            dayofweek.text = "\(startdate) - \(enddate)"
+            
+            loadtoday()
+            loaddates()
             
             if meals.count > 0 {
                 
@@ -156,20 +268,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Quinoa Pilaf with Chicken")
         foodimages.append(UIImage(named: "Quinoa Pilaf with Chicken")!)
         tableVie.reloadData()
-        d7.setTitleColor(.white, for: .normal)
-        d7.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
-        d2.setTitleColor(lightblue, for: .normal)
-        d2.setBackgroundImage(nil, for: .normal)
-        d3.setTitleColor(lightblue, for: .normal)
-        d3.setBackgroundImage(nil, for: .normal)
-        d4.setTitleColor(lightblue, for: .normal)
-        d4.setBackgroundImage(nil, for: .normal)
-        d5.setTitleColor(lightblue, for: .normal)
-        d5.setBackgroundImage(nil, for: .normal)
-        d6.setTitleColor(lightblue, for: .normal)
-        d6.setBackgroundImage(nil, for: .normal)
-        d1.setTitleColor(lightblue, for: .normal)
-        d1.setBackgroundImage(nil, for: .normal)
+
         
         
     }
@@ -186,20 +285,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Beef & Tomato Stew with Couscous")
         foodimages.append(UIImage(named: "Beef & Tomato Stew with Couscous")!)
         tableVie.reloadData()
-        d1.setTitleColor(.white, for: .normal)
-        d1.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
-        d2.setTitleColor(lightblue, for: .normal)
-        d2.setBackgroundImage(nil, for: .normal)
-        d3.setTitleColor(lightblue, for: .normal)
-        d3.setBackgroundImage(nil, for: .normal)
-        d4.setTitleColor(lightblue, for: .normal)
-        d4.setBackgroundImage(nil, for: .normal)
-        d5.setTitleColor(lightblue, for: .normal)
-        d5.setBackgroundImage(nil, for: .normal)
-        d6.setTitleColor(lightblue, for: .normal)
-        d6.setBackgroundImage(nil, for: .normal)
-        d7.setTitleColor(lightblue, for: .normal)
-        d7.setBackgroundImage(nil, for: .normal)
+
     }
     
     func loadtuesday() {
@@ -215,22 +301,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Sweet Potato & Black Bean Enchilada")
         foodimages.append(UIImage(named: "Sweet Potato & Black Bean Enchilada")!)
         tableVie.reloadData()
-        d2.setTitleColor(.white, for: .normal)
-        d2.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
-        d1.setTitleColor(lightblue, for: .normal)
-        d1.setBackgroundImage(nil, for: .normal)
-        d3.setTitleColor(lightblue, for: .normal)
-        d3.setBackgroundImage(nil, for: .normal)
-        d4.setTitleColor(lightblue, for: .normal)
-        d4.setBackgroundImage(nil, for: .normal)
-        d5.setTitleColor(lightblue, for: .normal)
-        d5.setBackgroundImage(nil, for: .normal)
-        d6.setTitleColor(lightblue, for: .normal)
-        d6.setBackgroundImage(nil, for: .normal)
-        d7.setTitleColor(lightblue, for: .normal)
-        d7.setBackgroundImage(nil, for: .normal)
+
     }
-    
     func loadwednesday() {
         
         meals.append("Berry & Almond Oats")
@@ -244,20 +316,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Salmona Nicoise Salad")
         foodimages.append(UIImage(named: "Salmon Nicoise Salad")!)
         tableVie.reloadData()
-        d3.setTitleColor(.white, for: .normal)
-        d3.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
-        d2.setTitleColor(lightblue, for: .normal)
-        d2.setBackgroundImage(nil, for: .normal)
-        d1.setTitleColor(lightblue, for: .normal)
-        d1.setBackgroundImage(nil, for: .normal)
-        d4.setTitleColor(lightblue, for: .normal)
-        d4.setBackgroundImage(nil, for: .normal)
-        d5.setTitleColor(lightblue, for: .normal)
-        d5.setBackgroundImage(nil, for: .normal)
-        d6.setTitleColor(lightblue, for: .normal)
-        d6.setBackgroundImage(nil, for: .normal)
-        d7.setTitleColor(lightblue, for: .normal)
-        d7.setBackgroundImage(nil, for: .normal)
+
     }
     
     func loadthursday() {
@@ -273,20 +332,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Homemade Beef Burger")
         foodimages.append(UIImage(named: "Homemade Beef Burger")!)
         tableVie.reloadData()
-        d4.setTitleColor(.white, for: .normal)
-        d4.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
-        d2.setTitleColor(lightblue, for: .normal)
-        d2.setBackgroundImage(nil, for: .normal)
-        d3.setTitleColor(lightblue, for: .normal)
-        d3.setBackgroundImage(nil, for: .normal)
-        d1.setTitleColor(lightblue, for: .normal)
-        d1.setBackgroundImage(nil, for: .normal)
-        d5.setTitleColor(lightblue, for: .normal)
-        d5.setBackgroundImage(nil, for: .normal)
-        d6.setTitleColor(lightblue, for: .normal)
-        d6.setBackgroundImage(nil, for: .normal)
-        d7.setTitleColor(lightblue, for: .normal)
-        d7.setBackgroundImage(nil, for: .normal)
+
+
     }
     
     func loadfriday() {
@@ -302,20 +349,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         meals.append("Sweet & Sour Chicken with Rice")
         foodimages.append(UIImage(named: "Sweet & Sour Chicken with Rice")!)
         tableVie.reloadData()
-        d5.setTitleColor(.white, for: .normal)
-        d5.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
-        d2.setTitleColor(lightblue, for: .normal)
-        d2.setBackgroundImage(nil, for: .normal)
-        d3.setTitleColor(lightblue, for: .normal)
-        d3.setBackgroundImage(nil, for: .normal)
-        d4.setTitleColor(lightblue, for: .normal)
-        d4.setBackgroundImage(nil, for: .normal)
-        d1.setTitleColor(lightblue, for: .normal)
-        d1.setBackgroundImage(nil, for: .normal)
-        d6.setTitleColor(lightblue, for: .normal)
-        d6.setBackgroundImage(nil, for: .normal)
-        d7.setTitleColor(lightblue, for: .normal)
-        d7.setBackgroundImage(nil, for: .normal)
+
         
     }
     
@@ -334,91 +368,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         tableVie.reloadData()
         
-        d6.setTitleColor(.white, for: .normal)
-        d6.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
-        d2.setTitleColor(lightblue, for: .normal)
-        d2.setBackgroundImage(nil, for: .normal)
-        d3.setTitleColor(lightblue, for: .normal)
-        d3.setBackgroundImage(nil, for: .normal)
-        d4.setTitleColor(lightblue, for: .normal)
-        d4.setBackgroundImage(nil, for: .normal)
-        d5.setTitleColor(lightblue, for: .normal)
-        d5.setBackgroundImage(nil, for: .normal)
-        d1.setTitleColor(lightblue, for: .normal)
-        d1.setBackgroundImage(nil, for: .normal)
-        d7.setTitleColor(lightblue, for: .normal)
-        d7.setBackgroundImage(nil, for: .normal)
     }
     
-    func loadrelevantday() {
-        
-        meals.removeAll()
-        foodimages.removeAll()
-        
-        if dayInWeek == "Sunday" {
-            
-            loadsunday()
-            
-        } else {
-            
-            if dayInWeek == "Monday" {
-                
-                loadmonday()
-                
-            } else {
-                
-                if dayInWeek == "Tuesday" {
-                    
-                    loadtuesday()
-                    
-                } else {
-                    
-                    
-                    if dayInWeek == "Wednesday" {
-                        
-                        loadwednesday()
-                        
-                    } else {
-                        
-                        if dayInWeek == "Thursday" {
-                            
-                            loadthursday()
-                        } else {
-                            
-                            if dayInWeek == "Friday" {
-                                
-                                loadfriday()
-                            } else {
-                                
-                                if dayInWeek == "Saturday" {
-                                    
-                                    loadsaturday()
-                                    
-                                } else {
-                                    
-                                    if dayInWeek == "Sunday" {
-                                        
-                                        loadsunday()
-                                        
-                                    } else {
-                                        
-                                        
-                                    }
-                                    
-                                }
-                                
-                            }
-                            
-                        }
-                        
-                    }
-                }
-                
-            }
-            
-        }
-        
-    }
+    
     @IBOutlet weak var dayofweek: UILabel!
     @IBAction func tapRefresh(_ sender: Any) {
         
@@ -521,33 +473,78 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+
+    func loaddates() {
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d"
+        var this3 = formatter.date(from: startdate)
+        
+        
+        var n1 = Calendar.current.date(byAdding: .day, value: 0, to: this3!)!
+        var n2 = Calendar.current.date(byAdding: .day, value: +1, to: this3!)!
+        var n3 = Calendar.current.date(byAdding: .day, value: +2, to: this3!)!
+        var n4 = Calendar.current.date(byAdding: .day, value: +3, to: this3!)!
+        var n5 = Calendar.current.date(byAdding: .day, value: +4, to: this3!)!
+        var n6 = Calendar.current.date(byAdding: .day, value: +5, to: this3!)!
+        var n7 = Calendar.current.date(byAdding: .day, value: +6, to: this3!)!
+        
+        formatter.dateFormat = "d"
+        var d1text = formatter.string(from: n1)
+        var d2text = formatter.string(from: n2)
+        var d3text = formatter.string(from: n3)
+        var d4text = formatter.string(from: n4)
+        var d5text = formatter.string(from: n5)
+        var d6text = formatter.string(from: n6)
+        var d7text = formatter.string(from: n7)
+        
+        
+        d1.setTitle(d1text, for: .normal)
+        d2.setTitle(d2text, for: .normal)
+        d3.setTitle(d3text, for: .normal)
+        d4.setTitle(d4text, for: .normal)
+        d5.setTitle(d5text, for: .normal)
+        d6.setTitle(d6text, for: .normal)
+        d7.setTitle(d7text, for: .normal)
+        
+    }
     
     @IBAction func tapForward(_ sender: Any) {
         
         counter += 1
         
-        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE"
-        var this2 = dayofweek.text!
-        
+        formatter.dateFormat = "MMM d"
+        var this2 = startdate
         let this3 = formatter.date(from: this2)
+        var this4 = enddate
+        let this5 = formatter.date(from: this4)
         
-        var nextdate = Calendar.current.date(byAdding: .day, value: +1, to: this3!)!
-        
+        var nextdate = Calendar.current.date(byAdding: .day, value: +7, to: this3!)!
+        var nextdate2 = Calendar.current.date(byAdding: .day, value: +7, to: this5!)!
 
-        dayInWeek = formatter.string(from: nextdate)
-        
-        dayofweek.text = dayInWeek
+        startdate = formatter.string(from: nextdate)
+        enddate = formatter.string(from: nextdate2)
+
+        dayofweek.text = "\(startdate) - \(enddate)"
+       
+        loaddates()
         
         loadrelevantday()
-
+        
+        tapback.alpha = 1
        
     }
     
     let today = Date()
 
+    @IBOutlet weak var tapback: UIButton!
     @IBAction func tapBack(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
         
         counter -= 1
         
@@ -557,26 +554,43 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             loadrelevantday()
             
+            tapback.alpha = 0
+            
         } else {
             
-            loadrelevantday()
+            if counter <= 1 {
+                
+                tapback.alpha = 0
+                
+                loadrelevantday()
+
+            } else {
+                
+                loadrelevantday()
+
+                
+            }
             
         }
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE"
-        var this2 = dayofweek.text!
-        
+        formatter.dateFormat = "MMM d"
+        var this2 = startdate
         let this3 = formatter.date(from: this2)
+        var this4 = enddate
+        let this5 = formatter.date(from: this4)
         
-        var nextdate = Calendar.current.date(byAdding: .day, value: -1, to: this3!)!
+        var nextdate = Calendar.current.date(byAdding: .day, value: -7, to: this3!)!
+        var nextdate2 = Calendar.current.date(byAdding: .day, value: -7, to: this5!)!
         
+        startdate = formatter.string(from: nextdate)
+        enddate = formatter.string(from: nextdate2)
         
-        dayInWeek = formatter.string(from: nextdate)
+        dayofweek.text = "\(startdate) - \(enddate)"
+        
+        loaddates()
         
         loadrelevantday()
-
-        dayofweek.text = dayInWeek
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -584,6 +598,646 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         selectedimage2 = foodimages[indexPath.row]
         self.performSegue(withIdentifier: "MealToRecipe", sender: self)
 
+    }
+    
+    func loadtoday() {
+        
+        
+        
+            if dayInWeek == "Sunday" {
+                
+                loadsunday()
+                
+            } else {
+                
+                if dayInWeek == "Monday" {
+                    
+                    d1.setTitleColor(.white, for: .normal)
+                    d1.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+                    d2.setTitleColor(lightblue, for: .normal)
+                    d2.setBackgroundImage(nil, for: .normal)
+                    d3.setTitleColor(lightblue, for: .normal)
+                    d3.setBackgroundImage(nil, for: .normal)
+                    d4.setTitleColor(lightblue, for: .normal)
+                    d4.setBackgroundImage(nil, for: .normal)
+                    d5.setTitleColor(lightblue, for: .normal)
+                    d5.setBackgroundImage(nil, for: .normal)
+                    d6.setTitleColor(lightblue, for: .normal)
+                    d6.setBackgroundImage(nil, for: .normal)
+                    d7.setTitleColor(lightblue, for: .normal)
+                    d7.setBackgroundImage(nil, for: .normal)
+                } else {
+                    
+                    if dayInWeek == "Tuesday" {
+                        
+                        d2.setTitleColor(.white, for: .normal)
+                        d2.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+                        d1.setTitleColor(lightblue, for: .normal)
+                        d1.setBackgroundImage(nil, for: .normal)
+                        d3.setTitleColor(lightblue, for: .normal)
+                        d3.setBackgroundImage(nil, for: .normal)
+                        d4.setTitleColor(lightblue, for: .normal)
+                        d4.setBackgroundImage(nil, for: .normal)
+                        d5.setTitleColor(lightblue, for: .normal)
+                        d5.setBackgroundImage(nil, for: .normal)
+                        d6.setTitleColor(lightblue, for: .normal)
+                        d6.setBackgroundImage(nil, for: .normal)
+                        d7.setTitleColor(lightblue, for: .normal)
+                        d7.setBackgroundImage(nil, for: .normal)
+                    } else {
+                        
+                        
+                        if dayInWeek == "Wednesday" {
+                            
+                            d3.setTitleColor(.white, for: .normal)
+                            d3.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+                            d2.setTitleColor(lightblue, for: .normal)
+                            d2.setBackgroundImage(nil, for: .normal)
+                            d1.setTitleColor(lightblue, for: .normal)
+                            d1.setBackgroundImage(nil, for: .normal)
+                            d4.setTitleColor(lightblue, for: .normal)
+                            d4.setBackgroundImage(nil, for: .normal)
+                            d5.setTitleColor(lightblue, for: .normal)
+                            d5.setBackgroundImage(nil, for: .normal)
+                            d6.setTitleColor(lightblue, for: .normal)
+                            d6.setBackgroundImage(nil, for: .normal)
+                            d7.setTitleColor(lightblue, for: .normal)
+                            d7.setBackgroundImage(nil, for: .normal)
+                        } else {
+                            
+                            if dayInWeek == "Thursday" {
+                                
+                                d4.setTitleColor(.white, for: .normal)
+                                d4.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+                                d2.setTitleColor(lightblue, for: .normal)
+                                d2.setBackgroundImage(nil, for: .normal)
+                                d3.setTitleColor(lightblue, for: .normal)
+                                d3.setBackgroundImage(nil, for: .normal)
+                                d1.setTitleColor(lightblue, for: .normal)
+                                d1.setBackgroundImage(nil, for: .normal)
+                                d5.setTitleColor(lightblue, for: .normal)
+                                d5.setBackgroundImage(nil, for: .normal)
+                                d6.setTitleColor(lightblue, for: .normal)
+                                d6.setBackgroundImage(nil, for: .normal)
+                                d7.setTitleColor(lightblue, for: .normal)
+                                d7.setBackgroundImage(nil, for: .normal)
+                                
+                            } else {
+                                
+                                if dayInWeek == "Friday" {
+                                    
+                                    d5.setTitleColor(.white, for: .normal)
+                                    d5.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+                                    d2.setTitleColor(lightblue, for: .normal)
+                                    d2.setBackgroundImage(nil, for: .normal)
+                                    d3.setTitleColor(lightblue, for: .normal)
+                                    d3.setBackgroundImage(nil, for: .normal)
+                                    d4.setTitleColor(lightblue, for: .normal)
+                                    d4.setBackgroundImage(nil, for: .normal)
+                                    d1.setTitleColor(lightblue, for: .normal)
+                                    d1.setBackgroundImage(nil, for: .normal)
+                                    d6.setTitleColor(lightblue, for: .normal)
+                                    d6.setBackgroundImage(nil, for: .normal)
+                                    d7.setTitleColor(lightblue, for: .normal)
+                                    d7.setBackgroundImage(nil, for: .normal)
+                                    
+                                } else {
+                                    
+                                    if dayInWeek == "Saturday" {
+                                        
+                                        loadsaturday()
+                                        
+                                    } else {
+                                        
+                                        if dayInWeek == "Sunday" {
+                                            
+                                            d7.setTitleColor(.white, for: .normal)
+                                            d7.setBackgroundImage(UIImage(named: "GreenCircle"), for: .normal)
+                                            d2.setTitleColor(lightblue, for: .normal)
+                                            d2.setBackgroundImage(nil, for: .normal)
+                                            d3.setTitleColor(lightblue, for: .normal)
+                                            d3.setBackgroundImage(nil, for: .normal)
+                                            d4.setTitleColor(lightblue, for: .normal)
+                                            d4.setBackgroundImage(nil, for: .normal)
+                                            d5.setTitleColor(lightblue, for: .normal)
+                                            d5.setBackgroundImage(nil, for: .normal)
+                                            d6.setTitleColor(lightblue, for: .normal)
+                                            d6.setBackgroundImage(nil, for: .normal)
+                                            d1.setTitleColor(lightblue, for: .normal)
+                                            d1.setBackgroundImage(nil, for: .normal)
+                                        } else {
+                                            
+                                            
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                }
+                
+            }
+        
+    }
+    
+    func loadrelevantday() {
+        
+        meals.removeAll()
+        foodimages.removeAll()
+        
+        if counter == 1 {
+            
+            
+            if dayInWeek == "Sunday" {
+                
+                loadsunday()
+                
+            } else {
+                
+                if dayInWeek == "Monday" {
+                    
+                    loadmonday()
+                    
+                } else {
+                    
+                    if dayInWeek == "Tuesday" {
+                        
+                        loadtuesday()
+                        
+                    } else {
+                        
+                        
+                        if dayInWeek == "Wednesday" {
+                            
+                            loadwednesday()
+                            
+                        } else {
+                            
+                            if dayInWeek == "Thursday" {
+                                
+                                loadthursday()
+                            } else {
+                                
+                                if dayInWeek == "Friday" {
+                                    
+                                    loadfriday()
+                                } else {
+                                    
+                                    if dayInWeek == "Saturday" {
+                                        
+                                        loadsaturday()
+                                        
+                                    } else {
+                                        
+                                        if dayInWeek == "Sunday" {
+                                            
+                                            loadsunday()
+                                            
+                                        } else {
+                                            
+                                            
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+        } else {
+            
+            if counter == 2 {
+                
+                
+                if dayInWeek == "Sunday" {
+                    
+                    loadmonday()
+                    
+                } else {
+                    
+                    if dayInWeek == "Monday" {
+                        
+                        loadtuesday()
+                        
+                    } else {
+                        
+                        if dayInWeek == "Tuesday" {
+                            
+                            loadwednesday()
+                            
+                        } else {
+                            
+                            
+                            if dayInWeek == "Wednesday" {
+                                
+                                loadthursday()
+                                
+                            } else {
+                                
+                                if dayInWeek == "Thursday" {
+                                    
+                                    loadfriday()
+                                    
+                                } else {
+                                    
+                                    if dayInWeek == "Friday" {
+                                        
+                                        loadsaturday()
+                                    } else {
+                                        
+                                        if dayInWeek == "Saturday" {
+                                            
+                                            loadsunday()
+                                            
+                                        } else {
+                                            
+                                            if dayInWeek == "Sunday" {
+                                                
+                                                loadmonday()
+                                                
+                                            } else {
+                                                
+                                                
+                                            }
+                                            
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                                
+                            }
+                        }
+                        
+                    }
+                    
+                }
+                
+            } else {
+                
+                if counter == 3 {
+                    
+                    
+                    if dayInWeek == "Sunday" {
+                        
+                        loadtuesday()
+                        
+                    } else {
+                        
+                        if dayInWeek == "Monday" {
+                            
+                            loadwednesday()
+                            
+                        } else {
+                            
+                            if dayInWeek == "Tuesday" {
+                                
+                                loadthursday()
+                                
+                            } else {
+                                
+                                
+                                if dayInWeek == "Wednesday" {
+                                    
+                                    loadfriday()
+                                    
+                                } else {
+                                    
+                                    if dayInWeek == "Thursday" {
+                                        
+                                        loadsaturday()
+                                        
+                                    } else {
+                                        
+                                        if dayInWeek == "Friday" {
+                                            
+                                            loadsunday()
+                                        } else {
+                                            
+                                            if dayInWeek == "Saturday" {
+                                                
+                                                loadmonday()
+                                                
+                                            } else {
+                                                
+                                                if dayInWeek == "Sunday" {
+                                                    
+                                                    loadtuesday()
+                                                    
+                                                } else {
+                                                    
+                                                    
+                                                }
+                                                
+                                            }
+                                            
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                } else {
+                    
+                    if counter == 4 {
+                        
+                        
+                        if dayInWeek == "Sunday" {
+                            
+                            loadthursday()
+                            
+                        } else {
+                            
+                            if dayInWeek == "Monday" {
+                                
+                                loadfriday()
+                                
+                            } else {
+                                
+                                if dayInWeek == "Tuesday" {
+                                    
+                                    loadsaturday()
+                                    
+                                } else {
+                                    
+                                    
+                                    if dayInWeek == "Wednesday" {
+                                        
+                                        loadsunday()
+                                        
+                                    } else {
+                                        
+                                        if dayInWeek == "Thursday" {
+                                            
+                                            loadmonday()
+                                            
+                                        } else {
+                                            
+                                            if dayInWeek == "Friday" {
+                                                
+                                                loadtuesday()
+                                            } else {
+                                                
+                                                if dayInWeek == "Saturday" {
+                                                    
+                                                    loadwednesday()
+                                                    
+                                                } else {
+                                                    
+                                                    if dayInWeek == "Sunday" {
+                                                        
+                                                        loadthursday()
+                                                        
+                                                    } else {
+                                                        
+                                                        
+                                                    }
+                                                    
+                                                }
+                                                
+                                            }
+                                            
+                                        }
+                                        
+                                    }
+                                }
+                                
+                            }
+                            
+                        }
+                        
+                    } else {
+                        
+                        if counter == 5 {
+                            
+                            
+                            if dayInWeek == "Sunday" {
+                                
+                                loadmonday()
+                                
+                            } else {
+                                
+                                if dayInWeek == "Monday" {
+                                    
+                                    loadtuesday()
+                                    
+                                } else {
+                                    
+                                    if dayInWeek == "Tuesday" {
+                                        
+                                        loadwednesday()
+                                        
+                                    } else {
+                                        
+                                        
+                                        if dayInWeek == "Wednesday" {
+                                            
+                                            loadthursday()
+                                            
+                                        } else {
+                                            
+                                            if dayInWeek == "Thursday" {
+                                                
+                                                loadfriday()
+                                                
+                                            } else {
+                                                
+                                                if dayInWeek == "Friday" {
+                                                    
+                                                    loadsaturday()
+                                                } else {
+                                                    
+                                                    if dayInWeek == "Saturday" {
+                                                        
+                                                        loadsunday()
+                                                        
+                                                    } else {
+                                                        
+                                                        if dayInWeek == "Sunday" {
+                                                            
+                                                            loadmonday()
+                                                            
+                                                        } else {
+                                                            
+                                                            
+                                                        }
+                                                        
+                                                    }
+                                                    
+                                                }
+                                                
+                                            }
+                                            
+                                        }
+                                    }
+                                    
+                                }
+                                
+                            }
+                            
+                        } else {
+                            
+                            if counter == 6 {
+                                
+                                
+                                if dayInWeek == "Sunday" {
+                                    
+                                    loadmonday()
+                                    
+                                } else {
+                                    
+                                    if dayInWeek == "Monday" {
+                                        
+                                        loadtuesday()
+                                        
+                                    } else {
+                                        
+                                        if dayInWeek == "Tuesday" {
+                                            
+                                            loadwednesday()
+                                            
+                                        } else {
+                                            
+                                            
+                                            if dayInWeek == "Wednesday" {
+                                                
+                                                loadthursday()
+                                                
+                                            } else {
+                                                
+                                                if dayInWeek == "Thursday" {
+                                                    
+                                                    loadfriday()
+                                                    
+                                                } else {
+                                                    
+                                                    if dayInWeek == "Friday" {
+                                                        
+                                                        loadsaturday()
+                                                    } else {
+                                                        
+                                                        if dayInWeek == "Saturday" {
+                                                            
+                                                            loadsunday()
+                                                            
+                                                        } else {
+                                                            
+                                                            if dayInWeek == "Sunday" {
+                                                                
+                                                                loadmonday()
+                                                                
+                                                            } else {
+                                                                
+                                                                
+                                                            }
+                                                            
+                                                        }
+                                                        
+                                                    }
+                                                    
+                                                }
+                                                
+                                            }
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                                
+                            } else {
+                                
+                                if counter == 2 {
+                                    
+                                    
+                                    if dayInWeek == "Sunday" {
+                                        
+                                        loadmonday()
+                                        
+                                    } else {
+                                        
+                                        if dayInWeek == "Monday" {
+                                            
+                                            loadtuesday()
+                                            
+                                        } else {
+                                            
+                                            if dayInWeek == "Tuesday" {
+                                                
+                                                loadwednesday()
+                                                
+                                            } else {
+                                                
+                                                
+                                                if dayInWeek == "Wednesday" {
+                                                    
+                                                    loadthursday()
+                                                    
+                                                } else {
+                                                    
+                                                    if dayInWeek == "Thursday" {
+                                                        
+                                                        loadfriday()
+                                                        
+                                                    } else {
+                                                        
+                                                        if dayInWeek == "Friday" {
+                                                            
+                                                            loadsaturday()
+                                                        } else {
+                                                            
+                                                            if dayInWeek == "Saturday" {
+                                                                
+                                                                loadsunday()
+                                                                
+                                                            } else {
+                                                                
+                                                                if dayInWeek == "Sunday" {
+                                                                    
+                                                                    loadmonday()
+                                                                    
+                                                                } else {
+                                                                    
+                                                                    
+                                                                }
+                                                                
+                                                            }
+                                                            
+                                                        }
+                                                        
+                                                    }
+                                                    
+                                                }
+                                            }
+                                            
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }
 var selectedimage2 = UIImage()

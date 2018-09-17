@@ -23,7 +23,7 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
         
         ref?.child(uid).updateChildValues(["Last Completed" : "\(selectedday)"])
         
-        self.performSegue(withIdentifier: "ExerciseToWorkouts", sender: self)
+        self.performSegue(withIdentifier: "ExerciseToCompleted", sender: self)
     }
     @IBOutlet weak var daytitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
