@@ -29,7 +29,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         currentweighttf.delegate = self
         targetweighttf.delegate = self
 
-        feettf.becomeFirstResponder()
         
         queryforstats()
         
