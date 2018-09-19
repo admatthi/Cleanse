@@ -2443,7 +2443,7 @@
                                     <constraint firstAttribute="height" constant="307" id="v6H-PE-IFY"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDP-Ys-oCQ">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDP-Ys-oCQ">
                                 <rect key="frame" x="0.0" y="60" width="375" height="245"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -2473,7 +2473,7 @@
                                     <constraint firstAttribute="width" constant="343" id="Nz3-O0-xY5"/>
                                     <constraint firstAttribute="height" constant="63" id="fIj-Qw-svb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" red="0.32549019607843138" green="0.8901960784313725" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2483,7 +2483,7 @@
                                     <constraint firstAttribute="height" constant="21" id="QKs-J0-4Al"/>
                                     <constraint firstAttribute="width" constant="66" id="eyy-EX-BC3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.61176470589999998" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2493,7 +2493,7 @@
                                     <constraint firstAttribute="width" constant="66" id="8wJ-Wj-Jty"/>
                                     <constraint firstAttribute="height" constant="21" id="MRc-bG-MDl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.61176470589999998" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2503,7 +2503,7 @@
                                     <constraint firstAttribute="width" constant="66" id="9ul-UX-OoT"/>
                                     <constraint firstAttribute="height" constant="21" id="eqa-qR-BQ9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.61176470589999998" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -4449,7 +4449,7 @@
         <image name="X" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7k4-3S-xjf"/>
+        <segue reference="2dE-gI-jel"/>
         <segue reference="wtW-UY-8ib"/>
         <segue reference="DB4-4x-SEm"/>
         <segue reference="az9-XH-acz"/>
