@@ -56,6 +56,12 @@ class GViewController: UIViewController, UITextFieldDelegate    {
         
     }
     
+    @IBAction func tapContinue(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

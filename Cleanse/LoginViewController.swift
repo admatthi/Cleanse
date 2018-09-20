@@ -136,7 +136,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
                 } else {
         
-                    tapcreate.alpha = 1
+                    tapcreate.alpha = 0
                 }
 
     }

@@ -115,6 +115,12 @@ class DViewController: UIViewController {
 
     @IBOutlet weak var icon3: UIImageView!
 
+    @IBAction func tapContinue(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

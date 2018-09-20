@@ -107,6 +107,12 @@ class FViewController: UIViewController {
         }
     }
     
+    @IBAction func tapContinue(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        
+    }
     @IBOutlet weak var icon1: UIImageView!
     @IBOutlet weak var icon2: UIImageView!
     

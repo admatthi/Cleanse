@@ -28,6 +28,12 @@ class EViewController: UIViewController {
     @IBOutlet weak var title4: UILabel!
     
     
+    @IBAction func tapContinue(_ sender: Any) {
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        
+    }
     @IBAction func tapB1(_ sender: Any) {
         
       
