@@ -9,9 +9,11 @@
 import UIKit
 
 class WorkoutCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var blabel: UILabel!
+    @IBOutlet weak var timelabel: UILabel!
     @IBOutlet weak var workoutimage: UIImageView!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var buttonimage: UIImageView!
-    @IBOutlet weak var daynumber: UILabel!
     @IBOutlet weak var daytitle: UILabel!
+    @IBOutlet weak var quotelabel: UILabel!
 }

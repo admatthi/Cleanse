@@ -21,7 +21,7 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBAction func tapComplete(_ sender: Any) {
         
-        ref?.child(uid).updateChildValues(["Last Completed" : "\(selectedday)"])
+        ref?.child(uid).child(selectedprogram).updateChildValues(["Last Completed" : "\(selectedday)"])
         
         self.performSegue(withIdentifier: "ExerciseToCompleted", sender: self)
     }
@@ -31,7 +31,7 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
 
         
-        daytitle.text = selectedtitle
+        daytitle.text = "Day \(selectedday)"
         
         // Do any additional setup after loading the view.
         exercisenames.removeAll()
@@ -42,38 +42,10 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
         length.removeAll()
         reps.removeAll()
         
-        if selectedtitle == "Legs" {
-            
-            loadlegs()
-            
-        } else {
-            
-            if selectedtitle == "Arms & Abs" {
-                
-                loadarms()
-                
-            } else {
-             
-                if selectedtitle == "Back" {
-                    
-                    loadback()
-                    
-                } else {
-                    
-                    if selectedtitle == "Rest" {
-                        
-                        
-                    } else {
-                        
-                        
-                    }
-                    
-                }
-                
-            }
-            
-        }
+        loaddata()
     }
+    
+
     
     func loadlegs() {
         
@@ -334,7 +306,174 @@ class ExerciseViewController: UIViewController, UITableViewDataSource, UITableVi
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func loaddata() {
+        
+        if daynumber == 0   {
+            
+            loadlegs()
+            
+        }
+        if daynumber == 1 {
+            
+            loadarms()
+            
+        }
+        if daynumber == 2 {
+            
+            loadback()
+            
+        }
+        
+        if daynumber == 3 {
+            
+            selectedtitle = "Rest"
+        }
+        
+        if daynumber == 4   {
+            
+            loadlegs()
+            
+        }
+        if daynumber == 5 {
+            
+            loadarms()
+            
+        }
+        if daynumber == 6 {
+            
+            loadback()
+            
+        }
+        
+        if daynumber == 7 {
+            
+            selectedtitle = "Rest"
+        }
+        
+        
+        if daynumber == 8   {
+            
+            loadlegs()
+            
+        }
+        if daynumber == 9 {
+            
+            loadarms()
+            
+        }
+        if daynumber == 10 {
+            
+            loadback()
+            
+        }
+        
+        if daynumber == 11 {
+            
+            selectedtitle = "Rest"
+        }
+        
+        if daynumber == 12   {
+            
+            loadlegs()
+            
+        }
+        if daynumber == 13 {
+            
+            loadarms()
+            
+        }
+        if daynumber == 14 {
+            
+            loadback()
+            
+        }
+        
+        if daynumber == 15 {
+            
+            selectedtitle = "Rest"
+        }
+        
+        if daynumber == 16   {
+            
+            loadlegs()
+            
+        }
+        if daynumber == 17 {
+            
+            loadarms()
+            
+        }
+        if daynumber == 18 {
+            
+            loadback()
+            
+        }
+        
+        if daynumber == 19 {
+            
+            selectedtitle = "Rest"
+        }
+        
+        if daynumber == 20   {
+            
+            loadlegs()
+            
+        }
+        if daynumber == 21 {
+            
+            loadarms()
+            
+        }
+        if daynumber == 22 {
+            
+            loadback()
+            
+        }
+        
+        if daynumber == 23 {
+            
+            selectedtitle = "Rest"
+        }
+        
+        if daynumber == 24   {
+            
+            loadlegs()
+            
+        }
+        if daynumber == 25 {
+            
+            loadarms()
+            
+        }
+        if daynumber == 26 {
+            
+            loadback()
+            
+        }
+        
+        if daynumber == 27 {
+            
+            selectedtitle = "Rest"
+        }
+        
+        if daynumber == 28   {
+            
+            loadlegs()
+            
+        }
+        if daynumber == 29 {
+            
+            loadarms()
+            
+        }
+        if daynumber == 30 {
+            
+            loadback()
+            
+        }
+        
+    }
 }
 
 let mighty = UIColor(red:0.90, green:0.33, blue:0.57, alpha:1.0)

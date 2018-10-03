@@ -19,7 +19,7 @@ class CompletedViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        titlelabel.text = "\(selectedtitle)!"
+        titlelabel.text = "\(selectedprogram) Day \(selectedday)!"
         
         // Configure
         bamview.config.particle = .confetti(allowedShapes: [Particle.ConfettiShape.triangle])

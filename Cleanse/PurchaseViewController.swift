@@ -123,27 +123,6 @@ class PurchaseViewController: UIViewController {
     }
     @IBAction func tapButton2(_ sender: Any) {
         
-        FBSDKAppEvents.logEvent("Yearly Pressed")
-        
-//        purchase(purchase: threedaytrial)
-        
-      
-        
-        purchases?.entitlements { entitlements in
-            guard let pro = entitlements?["Subscriptions"] else { return }
-            guard let monthly = pro.offerings["Yearly"] else { return }
-            guard let product = monthly.activeProduct else { return }
-            self.purchases?.makePurchase(product)
-            
-            
-        }
-        
-    }
-    
-    @IBAction func tapButton3(_ sender: Any) {
-        
-        //        generator.impactOccurred()
-        
         FBSDKAppEvents.logEvent("Monthly Pressed")
         
         purchases?.entitlements { entitlements in
@@ -154,6 +133,29 @@ class PurchaseViewController: UIViewController {
             
             
         }
+
+        
+    }
+    
+    @IBAction func tapButton3(_ sender: Any) {
+        
+        //        generator.impactOccurred()
+        
+        FBSDKAppEvents.logEvent("Yearly Pressed")
+        
+        //        purchase(purchase: threedaytrial)
+        
+        
+        
+        purchases?.entitlements { entitlements in
+            guard let pro = entitlements?["Subscriptions"] else { return }
+            guard let monthly = pro.offerings["Yearly"] else { return }
+            guard let product = monthly.activeProduct else { return }
+            self.purchases?.makePurchase(product)
+            
+            
+        }
+
 //        purchase(purchase: sevendayfreetrial)
         
   
