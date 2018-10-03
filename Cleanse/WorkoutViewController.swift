@@ -29,6 +29,8 @@ class WorkoutViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         programtitle.text = selectedprogram
         programimage.image = UIImage(named: "\(selectedprogram)")
+        selectedinformation = "Workouts"
+        
         
         if workoutdays.count > 0 {
             

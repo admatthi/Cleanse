@@ -186,7 +186,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableVie.estimatedRowHeight = 68.0
         tableVie.rowHeight = UITableViewAutomaticDimension
-        
+        selectedinformation = "THE CLEANSE PLAN"
         if Auth.auth().currentUser == nil {
             // Do smth if user is not logged in
             

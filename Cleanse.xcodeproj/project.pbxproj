@@ -67,6 +67,8 @@
 		9D43C646211B2B0800659451 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C645211B2B0800659451 /* SettingsViewController.swift */; };
 		9D43C648211B2B1400659451 /* BillingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C647211B2B1400659451 /* BillingViewController.swift */; };
 		9D43C64A211B339F00659451 /* MealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43C649211B339F00659451 /* MealsTableViewCell.swift */; };
+		9D94C1852165034300AFDD2D /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D94C1842165034300AFDD2D /* InfoTableViewCell.swift */; };
+		9D94C1872165035600AFDD2D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D94C1862165035600AFDD2D /* InfoViewController.swift */; };
 		9DA745C42138E5BA009FABE9 /* SalesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA745C32138E5BA009FABE9 /* SalesCollectionViewCell.swift */; };
 		DB2725367FCEDE97EC69E114 /* Pods_CleanseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20D30A4019BCDF22A6D5FBD /* Pods_CleanseUITests.framework */; };
 /* End PBXBuildFile section */
@@ -143,6 +145,8 @@
 		9D43C647211B2B1400659451 /* BillingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingViewController.swift; sourceTree = "<group>"; };
 		9D43C649211B339F00659451 /* MealsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewCell.swift; sourceTree = "<group>"; };
 		9D45E72221221EA800A26195 /* Cleanse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cleanse.entitlements; sourceTree = "<group>"; };
+		9D94C1842165034300AFDD2D /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		9D94C1862165035600AFDD2D /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		9DA745C32138E5BA009FABE9 /* SalesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesCollectionViewCell.swift; sourceTree = "<group>"; };
 		A868265761F55598D3AEA878 /* Pods-CleanseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanseTests/Pods-CleanseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8487AA3D090BB663F44EE56 /* Pods-CleanseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanseUITests/Pods-CleanseUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 				9D33AA732153286500F64379 /* ProgramsCollectionViewCell.swift */,
 				9D33AA6B21503C7C00F64379 /* CompletedViewController.swift */,
 				9D33AA6D215056C600F64379 /* ProfileViewController.swift */,
+				9D94C1842165034300AFDD2D /* InfoTableViewCell.swift */,
+				9D94C1862165035600AFDD2D /* InfoViewController.swift */,
 				9D43C5EA211A645D00659451 /* Assets.xcassets */,
 				9D2B8C282128B7E300188DC5 /* ApprovedViewController.swift */,
 				9D2B8C262128B7D300188DC5 /* ApprovedTableViewCell.swift */,
@@ -555,6 +561,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D43C5E6211A645A00659451 /* ViewController.swift in Sources */,
+				9D94C1872165035600AFDD2D /* InfoViewController.swift in Sources */,
+				9D94C1852165034300AFDD2D /* InfoTableViewCell.swift in Sources */,
 				9D2B8C292128B7E300188DC5 /* ApprovedViewController.swift in Sources */,
 				9D191EC8213B4A7B00B91985 /* RecipeViewController.swift in Sources */,
 				9D191ECA213B4A9000B91985 /* RecipeTableViewCell.swift in Sources */,
